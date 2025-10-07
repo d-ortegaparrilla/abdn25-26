@@ -1,0 +1,739 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../index.html">
+      
+      
+        <link rel="next" href="relacionales.html">
+      
+      
+      <link rel="icon" href="../favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Introducción - Administración de Bases de Datos en la Nube</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="Administración de Bases de Datos en la Nube" class="md-header__button md-logo" aria-label="Administración de Bases de Datos en la Nube" data-md-component="logo">
+      
+  <img src="../favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Administración de Bases de Datos en la Nube
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducción
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Administración de Bases de Datos en la Nube" class="md-nav__button md-logo" aria-label="Administración de Bases de Datos en la Nube" data-md-component="logo">
+      
+  <img src="../favicon.png" alt="logo">
+
+    </a>
+    Administración de Bases de Datos en la Nube
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UT1. Introducción a los Servicios Administrados de Bases de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT1. Introducción a los Servicios Administrados de Bases de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="introduccion.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historia-de-las-bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historia de las Bases de Datos.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bases-de-datos-relacionales-vs-no-relacionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bases de Datos Relacionales vs No Relacionales.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bases de Datos Relacionales vs No Relacionales.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-clave-acid-y-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principios clave: ACID y BASE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-clave-entre-acid-y-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferencias clave entre ACID y BASE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-usar-acid-y-cuando-usar-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuándo usar ACID y cuándo usar BASE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teorema-de-cap-conjetura-de-brewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teorema de CAP (Conjetura de Brewer)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-bases-de-datos-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Bases de Datos en la nube.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="relacionales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Administración de Bases de Datos Relacionales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historia-de-las-bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historia de las Bases de Datos.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bases-de-datos-relacionales-vs-no-relacionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bases de Datos Relacionales vs No Relacionales.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bases de Datos Relacionales vs No Relacionales.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-clave-acid-y-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principios clave: ACID y BASE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencias-clave-entre-acid-y-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferencias clave entre ACID y BASE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-usar-acid-y-cuando-usar-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuándo usar ACID y cuándo usar BASE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teorema-de-cap-conjetura-de-brewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teorema de CAP (Conjetura de Brewer)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-bases-de-datos-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Bases de Datos en la nube.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduccion">Introducción</h1>
+<h2 id="historia-de-las-bases-de-datos">Historia de las Bases de Datos.</h2>
+<p>Desde la aparición de los sistemas informáticos, una de sus principales aplicaciones ha sido el almacenamiento y el tratamiento de grandes cantidades de datos para permitir la consulta y la utilización posteriores. Una base de datos, formada por una colección de datos entre las que se establece una relación, es una de las herramientas más utilizadas a la hora de trabajar con grandes volúmenes de información.
+Los sistemas de gestión de datos han evolucionado desde las <strong>fichas o tarjetas</strong> rectangulares, que inicialmente surgieron para guardar la información, por ejemplo, de los datos de los libros de una biblioteca.</p>
+<p>La aparición de los ordenadores, los soportes electrónicos y, especialmente, los <strong>ficheros de datos</strong> en formato digital cambiaron radicalmente la situación. En los sistemas de gestión de datos basados en ficheros, la información se almacena en ficheros planos diseñados para una aplicación determinada.</p>
+<figure>
+  <img alt="ficheros" src="images/ficheros.png" />
+</figure>
+<p>Para solucionar los problemas de dependencia, de una aplicación concreta, y de concurrencia, entre otros, surgieron las tecnologías de bases de datos.
+Con las bases de datos, la información se organiza de manera adecuada para obtener un rendimiento razonable en su almacenamiento, su tratamiento y su recuperación. 
+Los primeros sistemas de base de datos fueron el modelo jerárquico y el modelo en red.</p>
+<p>El modelo jerárquico empieza con un nodo raíz que enlaza con la primera capa de nodos. Los nodos se relacionan a través de relaciones padre-hijo. Con esta estructura jerárquica se suelen solucionar los problemas de la ineficiencia en las búsquedas del modelo basado en ficheros. Los datos se estructuran en forma de árbol.</p>
+<p>Pero el modelo jerárquico solo era adecuado cuando la estructura de datos se podía representar con este tipo de relaciones tan específica.</p>
+<p><img align="right" alt="jerarquico" src="images/jerarquico.png" /></p>
+<p>Para solucionar estos problemas surgió el modelo en red. El modelo en red es como el modelo jerárquico excepto en que cada nodo no necesariamente tiene un solo padre. De esta manera, se representan los datos en una estructura en red, con más relaciones permitidas que en el modelo jerárquico, o sea en forma de grafo. Y además las relaciones o enlaces pueden ser dirigidos.
+Aunque soluciona alguno de los inconvenientes del modelo jerárquico, el modelo en red presenta un inconveniente importante, la dificultad en el diseño y el mantenimiento</p>
+<p>La <strong>base de datos relacional</strong> es un tipo de base de datos que cumple con el modelo relacional, que fue un modelo cuyas bases fueron postuladas por E.F. Codd en la década de los 70. Posteriormente se consolidó como un nuevo paradigma en los modelos de base de datos. 
+Están basadas en un modelo matemático formal que describe los datos y sus relaciones. 
+Las bases de datos relacionales separan la estructura de datos del almacenamiento físico de los mismos. El diseño de las bases de datos relacionales elimina anomalías de datos, como, por ejemplo, la inconsistencia.</p>
+<p><img align="right" alt="relacional" src="images/relacional.png" /></p>
+<p>En una base de datos relacional, cada fila en una tabla es un registro con una ID única, llamada clave. Las columnas de la tabla contienen los atributos de los datos y cada registro suele tener un valor para cada atributo, lo que simplifica la creación de relaciones entre los puntos de datos. 
+Las bases de datos relacionales están diseñadas para soportar cientos o incluso miles de usuarios accediendo simultáneamente. Conforme las empresas y los investigadores desarrollaron nuevos tipos de aplicaciones diseñadas para la Web, se dieron cuenta de que las bases de datos relacionales no eran suficiente para satisfacer sus necesidades.</p>
+<p>Las aplicaciones Web pueden necesitar soportar decenas de miles de usuarios o más. Algunas de las características más importantes de las bases de datos relacionales, como mantener la consistencia durante el acceso concurrente a los datos, requieren tiempo, almacenamiento y recursos computacionales.</p>
+<p>Este tipo de característica es vital en algunas aplicaciones. Como, por ejemplo, en la realización de una transferencia bancaria. Las diferentes operaciones en este caso se tendrían que agrupar en una transacción, de manera que una persona que consultara el saldo debería hacerlo antes o después de realizar este conjunto de operaciones, pero nunca a mitad de estas. </p>
+<p>Consideremos ahora un ejemplo de comercio electrónico. Los clientes utilizan una aplicación web para seleccionar los productos del catálogo de la empresa. Conforme se seleccionan los productos, se van añadiendo al carrito de la compra. El carrito de la compra representa una estructura de datos donde se almacenan los artículos seleccionados. Es una estructura de datos sencilla, con el identificador del usuario y la lista de ítems seleccionados. Aparte de eso, algún otro dato como la fecha, el número de unidades, etc. </p>
+<p>El modelo de datos más apropiado para el caso del comercio electrónico sería el de pares clave-valor porque en este caso no necesitamos las características más sofisticadas del modelo relacional, como la gestión de transacciones. En este caso se prioriza la disponibilidad y baja latencia frente a la coherencia.</p>
+<p>Las bases de datos relacionales han sido el tipo dominante de base de datos utilizadas para aplicaciones de bases de datos durante décadas. </p>
+<p>Con el auge de Internet, las limitaciones de las bases de datos relacionales se fueron constatando cada vez más. Los desarrolladores de aplicaciones web se dieron cuenta de que necesitaban:</p>
+<ul>
+<li>Grandes cantidades de operaciones de lectura y escritura</li>
+<li>Baja latencia</li>
+<li>Alta disponibilidad.</li>
+</ul>
+<p>Estos requerimientos son difíciles de llevar a cabo utilizando bases de datos relacionales.</p>
+<p>La presión de los problemas del mundo real motivó a los profesionales de la gestión de datos y a los desarrolladores de aplicaciones que crearon las bases de datos NoSQL. </p>
+<p>Las bases de datos NoSQL fueron creadas para superar las limitaciones de los sistemas de gestión de bases de datos relacionales. Las bases de datos NoSQL no van a reemplazar a las relacionales. Las dos se complementarán y adaptarán sus características mientras continúan siendo aplicadas en aplicaciones complejas.</p>
+<h2 id="bases-de-datos-relacionales-vs-no-relacionales">Bases de Datos Relacionales vs No Relacionales.</h2>
+<p>Las bases de datos modernas son almacenes de datos distribuidos que replican datos en varios nodos conectados por una red. Permiten a los usuarios realizar múltiples manipulaciones de datos, como lecturas y escrituras, en una sola transacción. Los usuarios esperan que los datos se mantengan coherentes en todos los nodos al final de la transacción. 
+Por ejemplo, si un cliente agrega un artículo a un carrito en un sitio web de comercio electrónico, todos los demás clientes deberían ver caer los niveles de disponibilidad del producto. Si el cliente agrega el último artículo al carrito, todos los demás usuarios deberían ver el artículo como agotado. En caso de que fallase alguna operación dentro de una transacción, los diseñadores de bases de datos deben tomar una decisión. La base de datos puede realizar una de las siguientes acciones:</p>
+<ol>
+<li>Cancelar la transacción y devolver un error, lo que reduce la disponibilidad pero garantiza la coherencia. El cliente no puede agregar el artículo a su carrito u otros clientes no pueden cargar los detalles de todos los productos hasta que agregar al carrito funcione con éxito. </li>
+<li>Continuar con la operación y, por lo tanto, proporcionar disponibilidad, pero arriesgando inconsistencias. El cliente agrega un artículo al carrito, pero otros clientes ven niveles de disponibilidad incorrectos, al menos de manera temporal. 
+En algunos casos de uso, la coherencia es fundamental y se prefieren las bases de datos relacionales (ACID). No obstante, hay otros casos de uso en los que no es crítica. Por ejemplo, cuando se acepta una solicitud de amistad en las redes sociales, no importa si otros usuarios ven por un momento un número incorrecto de amigos en su perfil. Sin embargo, un usuario no querrá perder el acceso a su feed de redes sociales mientras se ordenan los datos. Es en estos escenarios cuando las no relacionales (BASE) adquieren importancia.</li>
+</ol>
+<h3 id="principios-clave-acid-y-base">Principios clave: ACID y BASE</h3>
+<p>ACID y BASE son acrónimos de diferentes propiedades de bases de datos que representan el comportamiento de la base de datos durante el procesamiento de transacciones en línea. </p>
+<p>ACID: representa las palabras atomicidad, consistencia, aislamiento y durabilidad.</p>
+<ul>
+<li><strong>Atomicidad</strong> (Atomicity): La atomicidad garantiza que todos los pasos de una sola transacción de base de datos se completen o se reviertan a su estado original. Por ejemplo, en un sistema de reservas, tanto la tarea de reservar asientos como la de actualizar los detalles del cliente, deben completarse en una sola transacción. No se pueden reservar asientos para un perfil de cliente incompleto. No se modifican los datos si se produce un error en alguna parte de la transacción.</li>
+<li><strong>Consistencia</strong> (Consistency):  La consistencia garantiza que los datos cumplan con las restricciones de integridad y las reglas empresariales predefinidas. Incluso si varios usuarios realizan operaciones similares en simultáneo, los datos siguen siendo coherentes para todos. Por ejemplo, la consistencia asegura que, al transferir fondos de una cuenta a otra, el balance total antes y después de la transacción siga siendo el mismo. Si la cuenta A tiene 200€ y la cuenta B tiene 300€, el balance total es de 500€. Después de que se transfieran 100€ de la A a la B, A tiene 100€ y B tiene 400€. El balance total sigue siendo de 500€.</li>
+<li><strong>Aislamiento</strong> (Isolation): El aislamiento garantiza que una nueva transacción, que accede a un registro en particular, espere hasta que finalice la transacción anterior antes de comenzar a funcionar. Asegura que las transacciones simultáneas no interfieran entre sí, manteniendo la ilusión de que se ejecutan en serie. Otro ejemplo es un sistema de gestión de inventario multiusuario. Si un usuario actualiza la cantidad de un producto, otro usuario que acceda a la misma información verá una vista consistente y aislada de los datos, que no se verá afectada por la actualización en curso hasta que se confirme.</li>
+<li><strong>Durabilidad</strong> (Durability): La durabilidad garantiza que la base de datos mantenga todos los registros confirmados, incluso si se produce un error en el sistema. Asegura que todos los cambios sean permanentes y no se vean afectados por los errores posteriores del sistema cuando se confirmen las transacciones de ACID. Por ejemplo, en una aplicación de mensajería, cuando un usuario envía un mensaje y recibe una confirmación de entrega correcta, la propiedad de durabilidad garantiza que el mensaje nunca se pierda. Esto sigue siendo así incluso si la aplicación o el servidor fallan.</li>
+</ul>
+<p>BASE: significa coherencia eventual flexible básicamente disponible. El acrónimo destaca que BASE es lo opuesto a ACID, al igual que sus equivalentes químicos.</p>
+<ul>
+<li>
+<p><strong>Básicamente disponible</strong> (<strong>B</strong>asically <strong>A</strong>valiable): se refiere a la accesibilidad simultánea de la base de datos por parte de los usuarios en todo momento. Un usuario no necesita esperar a que otros finalicen la transacción para actualizar el registro. Por ejemplo, durante un aumento repentino del tráfico en una plataforma de comercio electrónico, el sistema puede priorizar la entrega de listados de productos y la aceptación de pedidos. Incluso si se produce un ligero retraso en la actualización de las cantidades en el inventario, los usuarios siguen retirando artículos.</p>
+</li>
+<li>
+<p><strong>Flexible</strong> (<strong>S</strong>oft State): Flexible hace referencia a la noción de que los datos pueden tener estados transitorios o temporales que pueden cambiar con el tiempo, incluso sin entradas o disparadores externos. Describe el estado de transición del registro cuando varias aplicaciones lo actualizan en simultáneo. El valor del registro se finaliza solo después de que se hayan completado todas las transacciones. Por ejemplo, si los usuarios editan una publicación en redes sociales, es posible que el cambio no sea visible para otros usuarios de forma inmediata. Sin embargo, la publicación se actualiza por sí sola más adelante (reflejando el cambio anterior) aunque ningún usuario la haya activado.</p>
+</li>
+<li>
+<p><strong>Consistencia eventual</strong> (<strong>E</strong>ventual Consistency): Consistencia eventual hace referencia a que el registro alcanzará la coherencia cuando se hayan completado todas las actualizaciones simultáneas. En este punto, las aplicaciones que consulten el registro verán el mismo valor. Por ejemplo, considere un sistema de edición de documentos distribuido en el que varios usuarios puedan editar un documento en simultáneo. Si los usuarios A y B editan la misma sección del documento en paralelo, sus copias locales pueden diferir temporalmente hasta que los cambios se propaguen y se sincronicen. Sin embargo, con el tiempo, el sistema garantiza la coherencia eventual al propagar y combinar los cambios realizados por los diferentes usuarios.</p>
+</li>
+</ul>
+<h3 id="diferencias-clave-entre-acid-y-base">Diferencias clave entre ACID y BASE</h3>
+<p>Al comparar entre estos dos modelos, debemos tener en cuenta los siguientes aspectos:</p>
+<ul>
+<li>
+<p><strong>Escalado</strong>
+Es <strong>más difícil escalar</strong> un modelo de transacciones de bases de datos <strong>ACID</strong> dado que este se centra en la <strong>coherencia</strong>. Solo se permite una transacción para un registro en cualquier momento, lo que dificulta el escalamiento horizontal. 
+Como alternativa, puede escalar de forma horizontal el modelo de base de datos BASE, ya que no necesita mantener una coherencia estricta. La adición de varios nodos en el clúster de la base de datos permite que el modelo BASE mejore la disponibilidad de los datos, el cual es el principio que impulsa la arquitectura de la base de datos. </p>
+</li>
+<li>
+<p><strong>Flexibilidad</strong>
+Las bases de datos <strong>ACID</strong> son <strong>menos flexibles</strong> a la hora de gestionar los datos. Debe garantizar la coherencia inmediata, ya que una base de datos ACID puede restringir el acceso a algunas aplicaciones si sufre cortes de red o de energía. Del mismo modo, si otros módulos de software están procesando un registro en particular, las aplicaciones deben esperar su turno para actualizar los datos. Por el contrario, las bases de datos BASE son más flexibles. En lugar de imponer restricciones estrictas, BASE permite a las aplicaciones modificar los registros cuando están disponibles. </p>
+</li>
+<li>
+<p><strong>Rendimiento</strong>
+Una base de datos <strong>ACID</strong> puede experimentar <strong>problemas de rendimiento</strong> al gestionar grandes volúmenes de datos o solicitudes de procesamiento simultáneo. Como los datos se procesan en un orden estricto, la sobrecarga de cada transacción crea retrasos que afectan a todas las aplicaciones que acceden al registro. 
+Por el contrario, las aplicaciones que acceden a una base de datos <strong>BASE</strong> pueden procesar los registros en cualquier momento. Esto <strong>reduce el tiempo de espera</strong> excesivo y mejora el rendimiento de la base de datos.</p>
+</li>
+<li>
+<p><strong>Sincronización</strong>
+Una base de datos <strong>ACID</strong> necesita un mecanismo de sincronización para confirmar los cambios de una transacción y reflejarlos en todos los registros asociados. Al mismo tiempo, debe <strong>bloquear el registro</strong> en particular de otras partes hasta que la transacción esté completa o sea descartada. Mientras tanto, una base de datos BASE se ejecuta sin bloquear los registros y, eventualmente, los sincroniza sin garantías de tiempo. Cuando trabajan con bases de datos <strong>BASE</strong>, los desarrolladores saben que puede haber <strong>inconsistencias al momento de procesar ciertos registros</strong>, por lo que toman las precauciones necesarias en la aplicación.</p>
+</li>
+</ul>
+<p>Resumen de las diferencias: ACID comparado con BASE</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>ACID</strong></th>
+<th><strong>BASE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Escalado</td>
+<td>Escala verticalmente.</td>
+<td>Escala horizontalmente.</td>
+</tr>
+<tr>
+<td>Flexibilidad</td>
+<td>Menos flexible. Bloquea registros específicos de otras aplicaciones durante el procesamiento.</td>
+<td>Más flexible. Permite que varias aplicaciones actualicen el mismo registro simultáneamente.</td>
+</tr>
+<tr>
+<td>Rendimiento</td>
+<td>El rendimiento disminuye cuando se procesan grandes volúmenes de datos.</td>
+<td>Capaz de manejar datos grandes y no estructurados con un alto rendimiento.</td>
+</tr>
+<tr>
+<td>Sincronización</td>
+<td>Sí. Agrega retraso al sincronizar.</td>
+<td>No hay sincronización a nivel de base de datos.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cuando-usar-acid-y-cuando-usar-base">Cuándo usar ACID y cuándo usar BASE</h3>
+<p>A pesar de sus diferencias, los sistemas de bases de datos ACID y BASE son relevantes en diferentes aplicaciones. ACID es la opción ideal para aplicaciones empresariales que requieren coherencia de datos, fiabilidad y previsibilidad. Por ejemplo, los bancos utilizan una base de datos ACID para almacenar las transacciones de los clientes porque la integridad de los datos es la máxima prioridad. Mientras tanto, las bases de datos BASE son una mejor opción para el procesamiento analítico en línea de datos menos estructurados y de gran volumen. Por ejemplo, los sitios web de ecommerce utilizan bases de datos BASE para actualizar los precios de los productos, que cambian con frecuencia. En este caso, la precisión de los precios es menos vital que permitir que todos los clientes accedan en tiempo real al precio del producto.</p>
+<h3 id="teorema-de-cap-conjetura-de-brewer">Teorema de CAP (Conjetura de Brewer)</h3>
+<p>El teorema <strong>CAP</strong>, también llamado formalmente <strong>Teorema de Brewer</strong>, dice que un sistema de datos distribuido pude asegurar dos de estas tres propiedades: Consistencia, Disponibilidad y Tolerancia al particionado. Veamos qué significa cada una de ellas:</p>
+<ul>
+<li>La <strong>consistencia</strong> (Consistency), Todos los nodos deben ver los mismos datos al mismo tiempo, esto quiere decir que; cualquier cambio en los datos se debe aplicar en todos los nodos, y cuando se recupere el dato tiene que ser el mismo en todos los nodos. Esto se le llama consistencia atómica, y se consigue replicando la información en todos los nodos. </li>
+<li>La <strong>disponibilidad</strong> (Availability), Cada petición en un nodo debe recibir y garantizar una confirmación si ha sido resuelta satisfactoriamente. En pocas palabras, se debe leer y escribir en todos los nodos. </li>
+<li>La <strong>tolerancia al particionado</strong> (Partition Tolerance), El sistema debe funcionar a pesar de que haya sido dividido por un fallo de comunicación, garantizando la disponibilidad a pesar de que un nodo se separe del grupo sin importar la causa. </li>
+</ul>
+<figure>
+  <img alt="ficheros" src="images/CAP.png" />
+</figure>
+<p>El teorema solo nos puede garantizar las siguientes combinaciones:</p>
+<ul>
+<li><strong>CP (Consistency &amp; Partition)</strong>: El sistema aplicara los cambios de forma consistente y aunque se pierda la comunicación entre nodos ocasionando el particionado, no se asegura que haya disponibilidad. </li>
+<li><strong>AP (Availability &amp; Partition)</strong>: El sistema siempre estará disponible a las peticiones, aunque se pierda la comunicación entre los nodos ocasionando el particionado, y en consecuencia por la pérdida de comunicación existirá inconsistencia porque no todos los nodos serán iguales. </li>
+<li><strong>CA (Consistency &amp; Availability)</strong>: El sistema siempre estará disponible respondiendo las peticiones y los datos procesados serán consistentes. En este caso no se puede permitir el particionado. 
+La correcta decisión de qué combinación necesitamos depende de nuestras necesidades de negocio. Cabe recordar que lo más importante en una base de datos relacional es la Consistencia. El teorema CAP, nos puede ayudar aún más para saber que Sistemas de Base de Datos debemos escoger, si SQL o NoSQL. </li>
+</ul>
+<h2 id="servicios-de-bases-de-datos-en-la-nube">Servicios de Bases de Datos en la nube.</h2>
+<p>Los <strong>servicios de bases de datos en la nube</strong> son formas de almacenamiento de la información en las instalaciones de un proveedor de servicios en Internet, en vez de en un servidor local. Este servicio se conoce como DbaaS (DataBase as a Service)
+Estos servicios cumplen con muchas de las funciones de un sistema gestor de base de datos tradicional, con la flexibilidad añadida del cloud computing (computación en la nube).
+Ventajas de una base de datos en la nube:</p>
+<ul>
+<li>Permite alojar bases de datos <strong>sin</strong> tener que comprar, mantener y actualizar <strong>hardware dedicado</strong>.</li>
+<li><strong>Facilidad de acceso</strong>: Los usuarios pueden acceder a las bases de datos en la nube desde prácticamente cualquier lugar, mediante la API o la interfaz web de un proveedor.</li>
+<li><strong>Escalabilidad</strong>: Las bases de datos en la nube pueden ampliar su capacidad de almacenamiento en tiempo de ejecución para adaptarse a necesidades cambiantes. Las organizaciones pagan solo por lo que usan. </li>
+<li><strong>Recuperación tras desastre</strong>: En caso de desastre natural, fallo del equipo o interrupción del suministro eléctrico, los datos se mantienen seguros mediante copias de seguridad en servidores remotos.</li>
+<li><strong>Seguridad</strong>: cifrado de los datos, control de acceso, etc. </li>
+<li><strong>Alta disponibilidad</strong>: se puede acceder cuándo y cómo se quiera a los datos.</li>
+<li><strong>Baja latencia</strong>: la latencia es el tiempo que tarda una consulta en ejecutarse y devolver los datos requeridos. Los sistemas de BD en la nube se encargan de proporcionar una baja latencia. Es una propiedad muy apreciada en las aplicaciones web, sobre todo.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
