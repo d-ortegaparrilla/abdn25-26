@@ -656,7 +656,7 @@ Una base de datos <strong>ACID</strong> necesita un mecanismo de sincronización
 <ul>
 <li>La <strong>consistencia</strong> (Consistency), Todos los nodos deben ver los mismos datos al mismo tiempo, esto quiere decir que; cualquier cambio en los datos se debe aplicar en todos los nodos, y cuando se recupere el dato tiene que ser el mismo en todos los nodos. Esto se le llama consistencia atómica, y se consigue replicando la información en todos los nodos. </li>
 <li>La <strong>disponibilidad</strong> (Availability), Cada petición en un nodo debe recibir y garantizar una confirmación si ha sido resuelta satisfactoriamente. En pocas palabras, se debe leer y escribir en todos los nodos. </li>
-<li>La <strong>tolerancia al particionado</strong> (Partition Tolerance), El sistema debe funcionar a pesar de que haya sido dividido por un fallo de comunicación, garantizando la disponibilidad a pesar de que un nodo se separe del grupo sin importar la causa. </li>
+<li>La <strong>tolerancia al particionado</strong> (Partition Tolerance), El sistema debe funcionar a pesar de que haya sido dividido por un fallo de comunicación, garantizando la disponibilidad a pesar de que un nodo se separe del grupo, sin importar la causa. </li>
 </ul>
 <figure>
   <img alt="ficheros" src="images/CAP.png" />
