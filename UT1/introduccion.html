@@ -665,9 +665,9 @@ Una base de datos <strong>ACID</strong> necesita un mecanismo de sincronización
 <ul>
 <li><strong>CP (Consistency &amp; Partition)</strong>: El sistema aplicara los cambios de forma consistente y aunque se pierda la comunicación entre nodos ocasionando el particionado, no se asegura que haya disponibilidad. </li>
 <li><strong>AP (Availability &amp; Partition)</strong>: El sistema siempre estará disponible a las peticiones, aunque se pierda la comunicación entre los nodos ocasionando el particionado, y en consecuencia por la pérdida de comunicación existirá inconsistencia porque no todos los nodos serán iguales. </li>
-<li><strong>CA (Consistency &amp; Availability)</strong>: El sistema siempre estará disponible respondiendo las peticiones y los datos procesados serán consistentes. En este caso no se puede permitir el particionado. 
-La correcta decisión de qué combinación necesitamos depende de nuestras necesidades de negocio. Cabe recordar que lo más importante en una base de datos relacional es la Consistencia. El teorema CAP, nos puede ayudar aún más para saber que Sistemas de Base de Datos debemos escoger, si SQL o NoSQL. </li>
+<li><strong>CA (Consistency &amp; Availability)</strong>: El sistema siempre estará disponible respondiendo las peticiones y los datos procesados serán consistentes. En este caso no se puede permitir el particionado. </li>
 </ul>
+<p>La correcta decisión de qué combinación necesitamos depende de nuestras necesidades de negocio. Cabe recordar que lo más importante en una base de datos relacional es la Consistencia. El teorema CAP, nos puede ayudar aún más para saber que Sistemas de Base de Datos debemos escoger, si SQL o NoSQL. </p>
 <h2 id="servicios-de-bases-de-datos-en-la-nube">Servicios de Bases de Datos en la nube.</h2>
 <p>Los <strong>servicios de bases de datos en la nube</strong> son formas de almacenamiento de la información en las instalaciones de un proveedor de servicios en Internet, en vez de en un servidor local. Este servicio se conoce como DbaaS (DataBase as a Service)
 Estos servicios cumplen con muchas de las funciones de un sistema gestor de base de datos tradicional, con la flexibilidad añadida del cloud computing (computación en la nube).
