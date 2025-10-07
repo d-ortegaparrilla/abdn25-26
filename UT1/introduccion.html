@@ -346,6 +346,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Diferencias clave entre ACID y BASE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escalado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flexibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flexibilidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendimiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sincronizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sincronización
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -480,6 +522,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Diferencias clave entre ACID y BASE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escalado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flexibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flexibilidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendimiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sincronizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sincronización
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -597,26 +681,16 @@ En algunos casos de uso, la coherencia es fundamental y se prefieren las bases d
 </ul>
 <h3 id="diferencias-clave-entre-acid-y-base">Diferencias clave entre ACID y BASE</h3>
 <p>Al comparar entre estos dos modelos, debemos tener en cuenta los siguientes aspectos:</p>
-<ul>
-<li>
-<p><strong>Escalado</strong>
-Es <strong>más difícil escalar</strong> un modelo de transacciones de bases de datos <strong>ACID</strong> dado que este se centra en la <strong>coherencia</strong>. Solo se permite una transacción para un registro en cualquier momento, lo que dificulta el escalamiento horizontal. 
+<h4 id="escalado">Escalado</h4>
+<p>Es <strong>más difícil escalar</strong> un modelo de transacciones de bases de datos <strong>ACID</strong> dado que este se centra en la <strong>coherencia</strong>. Solo se permite una transacción para un registro en cualquier momento, lo que dificulta el escalamiento horizontal. 
 Como alternativa, puede escalar de forma horizontal el modelo de base de datos BASE, ya que no necesita mantener una coherencia estricta. La adición de varios nodos en el clúster de la base de datos permite que el modelo BASE mejore la disponibilidad de los datos, el cual es el principio que impulsa la arquitectura de la base de datos. </p>
-</li>
-<li>
-<p><strong>Flexibilidad</strong>
-Las bases de datos <strong>ACID</strong> son <strong>menos flexibles</strong> a la hora de gestionar los datos. Debe garantizar la coherencia inmediata, ya que una base de datos ACID puede restringir el acceso a algunas aplicaciones si sufre cortes de red o de energía. Del mismo modo, si otros módulos de software están procesando un registro en particular, las aplicaciones deben esperar su turno para actualizar los datos. Por el contrario, las bases de datos BASE son más flexibles. En lugar de imponer restricciones estrictas, BASE permite a las aplicaciones modificar los registros cuando están disponibles. </p>
-</li>
-<li>
-<p><strong>Rendimiento</strong>
-Una base de datos <strong>ACID</strong> puede experimentar <strong>problemas de rendimiento</strong> al gestionar grandes volúmenes de datos o solicitudes de procesamiento simultáneo. Como los datos se procesan en un orden estricto, la sobrecarga de cada transacción crea retrasos que afectan a todas las aplicaciones que acceden al registro. 
+<h4 id="flexibilidad">Flexibilidad</h4>
+<p>Las bases de datos <strong>ACID</strong> son <strong>menos flexibles</strong> a la hora de gestionar los datos. Debe garantizar la coherencia inmediata, ya que una base de datos ACID puede restringir el acceso a algunas aplicaciones si sufre cortes de red o de energía. Del mismo modo, si otros módulos de software están procesando un registro en particular, las aplicaciones deben esperar su turno para actualizar los datos. Por el contrario, las bases de datos BASE son más flexibles. En lugar de imponer restricciones estrictas, BASE permite a las aplicaciones modificar los registros cuando están disponibles. </p>
+<h4 id="rendimiento">Rendimiento</h4>
+<p>Una base de datos <strong>ACID</strong> puede experimentar <strong>problemas de rendimiento</strong> al gestionar grandes volúmenes de datos o solicitudes de procesamiento simultáneo. Como los datos se procesan en un orden estricto, la sobrecarga de cada transacción crea retrasos que afectan a todas las aplicaciones que acceden al registro. 
 Por el contrario, las aplicaciones que acceden a una base de datos <strong>BASE</strong> pueden procesar los registros en cualquier momento. Esto <strong>reduce el tiempo de espera</strong> excesivo y mejora el rendimiento de la base de datos.</p>
-</li>
-<li>
-<p><strong>Sincronización</strong>
-Una base de datos <strong>ACID</strong> necesita un mecanismo de sincronización para confirmar los cambios de una transacción y reflejarlos en todos los registros asociados. Al mismo tiempo, debe <strong>bloquear el registro</strong> en particular de otras partes hasta que la transacción esté completa o sea descartada. Mientras tanto, una base de datos BASE se ejecuta sin bloquear los registros y, eventualmente, los sincroniza sin garantías de tiempo. Cuando trabajan con bases de datos <strong>BASE</strong>, los desarrolladores saben que puede haber <strong>inconsistencias al momento de procesar ciertos registros</strong>, por lo que toman las precauciones necesarias en la aplicación.</p>
-</li>
-</ul>
+<h4 id="sincronizacion">Sincronización</h4>
+<p>Una base de datos <strong>ACID</strong> necesita un mecanismo de sincronización para confirmar los cambios de una transacción y reflejarlos en todos los registros asociados. Al mismo tiempo, debe <strong>bloquear el registro</strong> en particular de otras partes hasta que la transacción esté completa o sea descartada. Mientras tanto, una base de datos BASE se ejecuta sin bloquear los registros y, eventualmente, los sincroniza sin garantías de tiempo. Cuando trabajan con bases de datos <strong>BASE</strong>, los desarrolladores saben que puede haber <strong>inconsistencias al momento de procesar ciertos registros</strong>, por lo que toman las precauciones necesarias en la aplicación.</p>
 <p>Resumen de las diferencias: ACID comparado con BASE</p>
 <table>
 <thead>
