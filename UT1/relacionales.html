@@ -339,6 +339,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="OLAP vs OLTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-las-diferencias-entre-el-olap-y-el-oltp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de las diferencias entre el OLAP y el OLTP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -366,6 +381,30 @@
       El servicio Amazon RDS
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="El servicio Amazon RDS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datos-relacionales-amazon-rds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datos relacionales - Amazon RDS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instancias-de-bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instancias de bases de datos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -468,6 +507,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="OLAP vs OLTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-las-diferencias-entre-el-olap-y-el-oltp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de las diferencias entre el OLAP y el OLTP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -495,6 +549,30 @@
       El servicio Amazon RDS
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="El servicio Amazon RDS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datos-relacionales-amazon-rds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datos relacionales - Amazon RDS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instancias-de-bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instancias de bases de datos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -567,7 +645,7 @@
 <h1 id="administracion-de-bases-de-datos-relacionales">Administración de Bases de Datos Relacionales.</h1>
 <h2 id="olap-vs-oltp">OLAP vs OLTP</h2>
 <p>El procesamiento analítico en línea (OLAP) y el procesamiento de transacciones en línea (OLTP) son sistemas de procesamiento de datos que ayudan a almacenar y analizar datos empresariales. Se pueden recopilar y almacenar datos de múltiples fuentes, como sitios web, aplicaciones, medidores inteligentes y sistemas internos. El OLAP combina y agrupa los datos para que puedan ser analizados desde diferentes puntos de vista. Por el contrario, el OLTP almacena y actualiza los datos transaccionales de manera confiable y eficiente en grandes volúmenes. Las bases de datos de OLTP pueden ser uno de los diferentes orígenes de datos de un sistema OLAP. </p>
-<p><strong>Ejemplo de las diferencias entre el OLAP y el OLTP</strong></p>
+<h4 id="ejemplo-de-las-diferencias-entre-el-olap-y-el-oltp">Ejemplo de las diferencias entre el OLAP y el OLTP</h4>
 <p>Pensemos en una gran empresa minorista que opera cientos de tiendas en todo el país. La empresa tiene una enorme base de datos que hace un seguimiento de las ventas, el inventario, los datos de los clientes y otras métricas clave.
 La empresa utiliza un sistema de OLTP para procesar transacciones en tiempo real, actualizar los niveles de inventario y administrar las cuentas de los clientes. Cada tienda está conectada a la base de datos central, que actualiza los niveles de inventario en tiempo real a medida que se venden los productos. La empresa también usa la tecnología de OLTP para administrar las cuentas de los clientes, por ejemplo, para rastrear los puntos de fidelidad, administrar la información de pago y procesar las devoluciones.
 Además, la empresa utiliza un sistema de OLAP para analizar los datos recopilados por el sistema de OLTP. Los analistas de negocios de la empresa pueden utilizar el OLAP para generar informes sobre las tendencias de ventas, los niveles de inventario, la demografía de los clientes y otras métricas clave. Realizan consultas complejas sobre grandes volúmenes de datos históricos para identificar patrones y tendencias que puedan servir para tomar decisiones empresariales. Identifican los productos populares en un periodo de tiempo determinado y utilizan la información para optimizar los presupuestos de inventario.</p>
@@ -583,10 +661,10 @@ Como vemos, en el primer caso, todos los ítems son responsabilidad del propieta
 <p>El almacenamiento en la nube ofrece un gran número de ventajas. Otro de los productos estrella de la computación en la nube es el uso de bases de datos, ya sean distribuidas o no.
 La principal ventaja de utilizar un servicio de base de datos basado en la nube es que no requieren de la administración por parte del usuario. Éste tan sólo utiliza el servicio sin necesidad de tener conocimientos avanzados sobre su administración. Estos servicios se conocen como administrados, ya que la propia plataforma cloud se encarga de gestionar el escalado, las copias de seguridad automáticas, la tolerancia a errores y la alta disponibilidad, y por tanto, estos servicios forman parte de una solución PaaS.
 Si nosotros creásemos una instancia EC2 e instalásemos cualquier sistema gestor de base de datos, como MariaDB o PostgreSQL, seríamos responsables de varias tareas administrativas, como el mantenimiento del servidor y la huella energética, el software, la instalación, la implementación de parches y las copias de seguridad de la base de datos, así como de garantizar su alta disponibilidad, de planificar la escalabilidad y la seguridad de los datos, y de instalar el sistema operativo e instalarle los respectivos parches.</p>
-<p><strong>Datos relacionales - Amazon RDS</strong>
-AWS ofrece Amazon RDS (https://aws.amazon.com/es/rds/) como servicio administrado que configura y opera una base de datos relacional en la nube, de manera que como desarrolladores sólo hemos de enfocar nuestros esfuerzos en los datos y optimizar nuestras aplicaciones.
-<strong>Instancias de bases de datos</strong>
-Una instancia de base de datos es un entorno de base de datos aislado que puede contener varias bases de datos creadas por el usuario. 
+<h4 id="datos-relacionales-amazon-rds">Datos relacionales - Amazon RDS</h4>
+<p>AWS ofrece Amazon RDS (https://aws.amazon.com/es/rds/) como servicio administrado que configura y opera una base de datos relacional en la nube, de manera que como desarrolladores sólo hemos de enfocar nuestros esfuerzos en los datos y optimizar nuestras aplicaciones.</p>
+<h4 id="instancias-de-bases-de-datos">Instancias de bases de datos</h4>
+<p>Una instancia de base de datos es un entorno de base de datos aislado que puede contener varias bases de datos creadas por el usuario. 
 RDS admite ocho motores de bases de datos:</p>
 <figure>
   <img alt="local-ec2-rds" src="images/motores.png" />
