@@ -663,7 +663,7 @@ Una base de datos <strong>ACID</strong> necesita un mecanismo de sincronización
 </figure>
 <p>El teorema solo nos puede garantizar las siguientes combinaciones:</p>
 <ul>
-<li><strong>CP (Consistency &amp; Partition)</strong>: El sistema aplicara los cambios de forma consistente y aunque se pierda la comunicación entre nodos ocasionando el particionado, no se asegura que haya disponibilidad. </li>
+<li><strong>CP (Consistency &amp; Partition)</strong>: El sistema aplicara los cambios de forma consistente y aunque se pierda la comunicación entre nodos ocasionando el particionado. No se asegura que haya disponibilidad. </li>
 <li><strong>AP (Availability &amp; Partition)</strong>: El sistema siempre estará disponible a las peticiones, aunque se pierda la comunicación entre los nodos ocasionando el particionado, y en consecuencia por la pérdida de comunicación existirá inconsistencia porque no todos los nodos serán iguales. </li>
 <li><strong>CA (Consistency &amp; Availability)</strong>: El sistema siempre estará disponible respondiendo las peticiones y los datos procesados serán consistentes. En este caso no se puede permitir el particionado. </li>
 </ul>
