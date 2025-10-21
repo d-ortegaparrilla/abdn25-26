@@ -1,0 +1,1100 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="relacionales.html">
+      
+      
+      
+      <link rel="icon" href="../favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Bases de Datos No Relacionales - Administración de Bases de Datos en la Nube</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bases-de-datos-no-relacionales" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="Administración de Bases de Datos en la Nube" class="md-header__button md-logo" aria-label="Administración de Bases de Datos en la Nube" data-md-component="logo">
+      
+  <img src="../favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Administración de Bases de Datos en la Nube
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bases de Datos No Relacionales
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Administración de Bases de Datos en la Nube" class="md-nav__button md-logo" aria-label="Administración de Bases de Datos en la Nube" data-md-component="logo">
+      
+  <img src="../favicon.png" alt="logo">
+
+    </a>
+    Administración de Bases de Datos en la Nube
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UT1. Introducción a los Servicios Administrados de Bases de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT1. Introducción a los Servicios Administrados de Bases de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduccion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="relacionales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Administración de Bases de Datos Relacionales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Bases de Datos No Relacionales
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="no-relacionales.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bases de Datos No Relacionales
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-bases-de-datos-nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de bases de datos NoSQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de bases de datos NoSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basadas-en-pares-clave-valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basadas en pares clave-valor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basadas en pares clave-valor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basadas-en-documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basadas en documentos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basadas en documentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basadas-en-columna-ancha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basadas en columna ancha
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basadas en columna ancha">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basadas-en-grafos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basadas en grafos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basadas en grafos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basadas-en-series-temporales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basadas en series temporales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon DynamoDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Amazon DynamoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elementos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-de-dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características de DynamoDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Características de DynamoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sin-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sin servidor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      NoSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#totalmente-administrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Totalmente administrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendimiento-de-milisegundos-de-un-solo-digito-a-cualquier-escala" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendimiento de milisegundos de un solo dígito a cualquier escala
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso-de-dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de uso de DynamoDB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Costes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-bases-de-datos-nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de bases de datos NoSQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de bases de datos NoSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basadas-en-pares-clave-valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basadas en pares clave-valor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basadas en pares clave-valor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basadas-en-documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basadas en documentos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basadas en documentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basadas-en-columna-ancha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basadas en columna ancha
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basadas en columna ancha">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basadas-en-grafos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basadas en grafos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basadas en grafos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basadas-en-series-temporales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basadas en series temporales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon DynamoDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Amazon DynamoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elementos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-de-dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características de DynamoDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Características de DynamoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sin-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sin servidor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      NoSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#totalmente-administrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Totalmente administrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendimiento-de-milisegundos-de-un-solo-digito-a-cualquier-escala" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendimiento de milisegundos de un solo dígito a cualquier escala
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso-de-dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de uso de DynamoDB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Costes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bases-de-datos-no-relacionales">Bases de datos no relacionales</h1>
+<p>Las bases de datos no relacionales se refieren a menudo como bases de datos <strong>NoSQL</strong>. El nombre NoSQL es desafortunado, ya que en realidad no se refiere a ninguna tecnología en particular; originalmente fue pensado simplemente como un hashtag pegadizo de Twitter para una reunión sobre bases de datos distribuidas, no relacionales y de código abierto en 2009. </p>
+<p>Si definimos NoSQL de manera formal, podemos decir que se trata de una variedad de tecnologías diseñadas para procesar conjuntos de datos de manera rápida y eficiente, enfocándose principalmente en el rendimiento, la fiabilidad y la flexibilidad.</p>
+<p>Si nos basamos en el acrónimo, parece indicar cualquier sistema de almacenamiento de datos que no siga un modelo relacional, donde los datos no son relacionales y, por lo tanto, no utilizan SQL como lenguaje de consulta. En realidad, el "No" se refiere a "not only", lo que significa que los sistemas NoSQL se enfocan en ser complementarios a los sistemas de gestión de bases de datos relacionales (SGBD), priorizando la escalabilidad y la disponibilidad en lugar de la atomicidad y la consistencia de los datos.</p>
+<p>Existen varias fuerzas impulsoras detrás de la adopción de bases de datos NoSQL, entre ellas:</p>
+<ul>
+<li><strong>Escalabilidad</strong>. Conseguir una escalabilidad mayor que las bases de datos relacionales, incluso conjuntos de datos muy grandes o con requisitos de rendimiento de escritura muy altos.</li>
+<li><strong>Costes</strong>. Una preferencia generalizada por software libre y de código abierto sobre productos de bases de datos comerciales, lo que implica una reducción en los costes en concepto de licencias.</li>
+<li><strong>Flexibilidad</strong>. Permiten superar la restricción de los esquemas relacionales y de esta manera aplicar modelos de datos más dinámicos y expresivos.</li>
+<li><strong>Disponibilidad</strong>: Diseñar BD para funcionar en múltiples servidores de bajo coste. Esto permite que cuando uno de estos falle el resto de servidores del clúster puedan continuar dando soporte al servicio.</li>
+</ul>
+<p>Hay una gran cantidad de diferentes aplicaciones, las cuales tienen diferentes requisitos, por lo que la mejor opción de tecnología para una situación puede ser muy diferente de la mejor opción para otra. Por lo tanto, parece probable que en el futuro, las BD relacionales sigan utilizándose junto con una amplia variedad de almacenes de datos no relacionales. Esta idea se refiere en ocasiones como persistencia políglota.</p>
+<p>Las BD distribuidas NoSQL siguen el modelo transaccional BASE, el cual se centra en la alta disponibilidad.</p>
+<h2 id="tipos-de-bases-de-datos-nosql">Tipos de bases de datos NoSQL</h2>
+<p>Existen varios sistemas de bases de datos NoSQL diferentes debido a las variaciones en la forma en que administran y almacenan los datos sin esquemas. A continuación, explicamos algunos de los tipos más comunes.</p>
+<h3 id="basadas-en-pares-clave-valor">Basadas en pares clave-valor</h3>
+<p>Las BD basadas en pares clave-valor (<em>key-value pair databases</em>) son las BD NoSQL más simples. Están compuestas por 2 componentes: claves y valores.</p>
+<p>Las claves son identificadores asociados a los valores de manera análoga a la estructura de datos de un mapa.</p>
+<p>Su funcionamiento es similar a tener una tabla relacional con dos columnas, por ejemplo, id y nombre, donde id actúa como clave y nombre como valor. Mientras que en una BD relacional en la columna nombre sólo podemos guardar datos de tipo cadena o numérico, en un almacén clave-valor, el valor puede ser un dato simple o un objeto. En muchos casos, se guarda un objeto binario grande (<em>BLOB</em>). Cuando una aplicación accede utilizando la clave y el valor, se almacena el par de elementos. Si la clave ya existe, el valor se actualiza.</p>
+<p>El cliente tiene la capacidad de obtener el valor correspondiente a una clave, asignar un valor a una clave o eliminar una clave del almacén.
+Debido a que las BD clave-valor permiten prácticamente cualquier tipo de datos en sus valores, es importante que los desarrolladores de software implementen verificaciones en sus programas. Esto es debido a que el sistema no tiene conocimiento del contenido del valor, ya que sólo se pueden consultar los datos a través de la clave, lo cual puede ser una desventaja. Por lo tanto, la aplicación debe ser la encargada de conocer qué se almacena en cada valor.</p>
+<p>Debido a que los requisitos exigidos son mínimos, las BD de este tipo pueden tener un rendimiento increíble en una variedad de escenarios, pero por lo general no son útiles cuando se tienen datos o consultas complejas.</p>
+<figure style="align: center;">
+    <img src="./images/key-value.jpg">
+    <figcaption>Representación de un almacén clave-valor</figcaption>
+</figure>
+
+<p>Algunas de estas BD son almacenadas en RAM, mientras que otras se almacenan de manera persistente en discos duros.</p>
+<h4 id="casos-de-uso">Casos de uso</h4>
+<p>Las BD de clave-valor son adecuadas para aplicaciones que tienen lecturas y escrituras pequeñas y frecuentes junto con modelos de datos simples. Los valores almacenados en BD clave-valor pueden ser desde simple valores escalares simples, como números enteros o booleanos, hasta tipos de datos estructurados, como listas y estructuras JSON.</p>
+<p>Las BD clave-valor generalmente tienen funciones de consulta simples que les permiten buscar un valor por su clave. Algunas BD de este tipo admiten funciones de búsqueda que brindan algo más de flexibilidad. Generalmente carecen de las capacidades de consulta de otros tipos de BD NoSQL.</p>
+<p>Las BD de clave-valor se utilizan en una amplia gama de aplicaciones, como las siguientes:</p>
+<ul>
+<li>Almacenamiento en caché de datos de BD relacionales para mejorar el rendimiento.</li>
+<li>Rastreo de atributos transitorios en una aplicación web, como un carrito de compras.</li>
+<li>Almacenamiento de información de datos de usuario y configuración para aplicaciones móviles.</li>
+<li>Almacenamiento de objetos grandes, como imágenes y archivos de audio.</li>
+</ul>
+<p><strong>Ejemplos</strong>: Redis, Valkey, Memcached, Amazon DynamoDB, Amazon MemoryDB, Azure CosmosDB.</p>
+<h3 id="basadas-en-documentos">Basadas en documentos</h3>
+<p>Las BD basadas en documentos se pueden ver como una extensión de las BD clave-valor. Este tipo de BD almacena los valores como entidades semiestructuradas llamadas documentos, normalmente en un formato estándar como la notación de objetos JavaScript (JSON), o representaciones binarias de este.</p>
+<p>El principal beneficio de utilizar una BD de documentos proviene del hecho de que no está limitado a realizar consultas solo por clave, al contrario que las BD clave-valor. Los datos dejan de ser opacos por lo que la BD podrá realizar trabajo adicional sin tener que traducir los datos a un formato que comprenda.</p>
+<p>Los documentos se agrupan en colecciones o bases de datos, dependiendo del sistema, lo que permite agrupar documentos.</p>
+<p>Los documentos contienen uno o más campos, donde cada campo contiene un valor con un tipo, ya sea cadena, entero, flotante, fecha, binario o array u otro documento. </p>
+<figure style="align: center;">
+    <img src="./images/json1.png">
+    <figcaption>Documento en formato JSON</figcaption>
+</figure>
+
+<p>Una de las características más importantes de las BD de documentos es que no es necesario definir un esquema fijo antes de agregar datos a la BD. Simplemente al agregar un documento a la BD se crean las estructuras de datos subyacentes necesarias para respaldar el documento. La falta de un esquema fijo brinda a los desarrolladores más flexibilidad con las BD de documentos que con las BD relacionales.</p>
+<figure style="align: center;">
+    <img src="./images/json2.png">
+    <figcaption>Documento con campos distintos</figcaption>
+</figure>
+
+<h4 id="casos-de-uso_1">Casos de uso</h4>
+<p>Las BD de documentos están diseñadas para brindar flexibilidad, siendo una buena opción para aplicaciones que requieren la capacidad de almacenar atributos que varían junto con grandes cantidades de datos. </p>
+<p>Por ejemplo, para representar productos en una BD relacional, un diseñador puede usar una tabla para atributos comunes y tablas adicionales para cada subtipo de producto para almacenar atributos utilizados solo en el subtipo de producto. Las BD de documentos pueden manejar esta situación de manera más sencilla.</p>
+<p>Las BD de documentos proporcionan documentos integrados, que son útiles para desnormalizar. En lugar de almacenar datos en diferentes tablas, los datos que se consultan frecuentemente juntos se almacenan juntos en el mismo documento.</p>
+<p>Las BD de documentos mejoran las capacidades de consulta de las BD clave-valor clave con la indexación y la capacidad de filtrar documentos según los atributos del documento.</p>
+<p>Las BD de documentos son probablemente las más populares de las bases de datos NoSQL debido a su flexibilidad, rendimiento y facilidad de uso.
+Estas BD son adecuadas para una variedad de casos de uso, incluidos:</p>
+<ul>
+<li>Soporte de backend para sitios web con grandes volúmenes de lecturas y escrituras.</li>
+<li>Gestión de tipos de datos con atributos variables, como productos.</li>
+<li>Seguimiento de tipos variables de metadatos.</li>
+<li>Aplicaciones que utilizan estructuras de datos JSON.</li>
+<li>Aplicaciones que se benefician de la desnormalización al incorporar estructuras dentro de estructuras.</li>
+</ul>
+<p><strong>Ejemplos</strong>: MongoDB, CouchDB, Amazon DocumentDB, Amazon DynamoDB, Azure CosmosDB.</p>
+<h3 id="basadas-en-columna-ancha">Basadas en columna ancha</h3>
+<p>Las BD basadas en columna ancha son quizás las más complejas de los tipos de bases de datos NoSQL, al menos en términos de las estructuras de bloques básicos. Las bases de datos de familias de columnas comparten algunos términos con las bases de datos relacionales, como filas y columnas, pero existen diferencias importantes entre estas estructuras.</p>
+<p>La columna es la unidad básica de almacenamiento en una base de datos de familias de columnas. </p>
+<p>Supongamos que tenemos los siguientes datos:</p>
+<figure>
+  <img alt="local-ec2-rds" src="images/column1.png" />
+</figure>
+<p>Dependiendo del almacenamiento en filas o columnas tendríamos la siguiente representación:</p>
+<figure>
+  <img alt="local-ec2-rds" src="images/column2.png" />
+</figure>
+<p>Cuando hay una gran cantidad de columnas, puede resultar útil agruparlas en colecciones de columnas relacionadas. Por ejemplo, el nombre y los apellidos suelen usarse juntos, y los números de oficina y los números de teléfono de la oficina se necesitan juntos con frecuencia. Estos pueden agruparse en colecciones llamadas familias de columnas. </p>
+<p>Al almacenar conjuntamente las familias de columnas se mejora el rendimiento de acceso y permite la codificación/compresión de los datos, reduciendo su tamaño.</p>
+<figure style="align: center;">
+    <img src="./images/column3.png">
+    <figcaption>Comparación filas y columnas</figcaption>
+</figure>
+
+<p>Un modelo basado en columnas se representa como una estructura agregada de dos niveles. El primer nivel formado por un almacén clave-valor, siendo la clave el identificador de la fila, y el valor un nuevo mapa con los datos agregados de la fila (<em>familias de columnas</em>). Los valores de este segundo nivel son las columnas. De este modo, podemos acceder a los datos de un fila, o a una determinada columna:</p>
+<figure style="align: center;">
+    <img src="./images/column4.png">
+    <figcaption>Representación de un almacén basado en columnas</figcaption>
+</figure>
+
+<p>Al igual que otros tipos de BD NoSQL, las BD basadas en columna ancha no requieren un esquema fijo predefinido. Los desarrolladores pueden agregar columnas según sea necesario. Este tipo de BD están diseñadas para filas con muchas columnas. No es inusual que las bases de datos de familias de columnas admitan millones de columnas. El término de columna ancha hace referencia a este elevado número de columnas que puede llegar a tener cada fila.</p>
+<h4 id="casos-de-uso_2">Casos de uso</h4>
+<p>Las BD de columna ancha están diseñadas para grandes volúmenes de datos, con un gran rendimiento de lectura y escritura, y alta disponibilidad. 
+Este tipo de BD se ejecutan en clústeres de varios servidores. No se debe utilizar este tipo de BD en situaciones en las que los datos son lo suficientemente pequeños como para ejecutarse en un solo servidor. En este último caso debería considerarse el uso de BD basadas en documentos o de clave-valor.</p>
+<p>Las BD de columna ancha son adecuadas para su uso en:</p>
+<ul>
+<li>Aplicaciones que requieren la capacidad de escribir de manera continua en la BD.</li>
+<li>Aplicaciones que están distribuidas geográficamente en varios centros de datos.</li>
+<li>Aplicaciones que pueden tolerar alguna inconsistencia a corto plazo en las réplicas.</li>
+<li>Aplicaciones con campos dinámicos.</li>
+<li>Aplicaciones con potencial para volúmenes de datos realmente grandes, como cientos de terabytes.</li>
+</ul>
+<p>Este tipo de BD son usadas en sistemas de Big Data como los siguientes:</p>
+<ul>
+<li>Análisis de seguridad mediante el uso del tráfico de red y el modo de datos de registro.</li>
+<li>Big Science, como la bioinformática, que utiliza datos genéticos y proteómicos.</li>
+<li>Análisis del mercado de valores mediante datos comerciales.</li>
+<li>Aplicaciones a escala web, como la búsqueda.</li>
+<li>Servicios de redes sociales.</li>
+</ul>
+<p><strong>Ejemplos</strong>: Apache Cassandra, Apache HBase, Riak, Amazon Keyspaces, Azure CosmosDB, Azure Managed Instance for Apache Cassandra.</p>
+<h3 id="basadas-en-grafos">Basadas en grafos</h3>
+<p>En lugar de modelar datos mediante columnas y filas, una base de datos de grafos utiliza estructuras llamadas nodos y relaciones. Un <strong>nodo</strong> es un objeto que tiene un identificador y un conjunto de atributos. Una <strong>relación</strong> es un vínculo entre dos nodos que contienen atributos sobre esa relación</p>
+<p>Existen muchas formas de utilizar bases de datos de grafos. Los nodos pueden representar personas y las relaciones pueden representar sus amistades en redes sociales. Un nodo puede ser una ciudad y una relación entre ciudades puede utilizarse para almacenar información sobre la distancia y el tiempo de viaje entre ciudades.</p>
+<figure style="align: center;">
+    <img src="./images/grafos1.png">
+    <figcaption>Propiedades de relaciones entre nodos</figcaption>
+</figure>
+
+<p>Tanto los nodos como sus relaciones pueden tener estructuras complejas. Los nodos pueden tener atributos que los describan.</p>
+<figure style="align: center;">
+    <img src="./images/grafos2.png">
+    <figcaption>Atributos de un nodo</figcaption>
+</figure>
+
+<h4 id="casos-de-uso_3">Casos de uso</h4>
+<p>Las BD de grafos son muy adecuadas en problemas que se prestan a representaciones como redes de entidades conectadas entre sí. Una forma de evaluar la utilidad de una BD de grafos es determinar si las instancias de entidades tienen relaciones con otras instancias de entidades.</p>
+<p>Por ejemplo, dos pedidos en una aplicación de comercio electrónico probablemente no tengan conexión entre sí. Es posible que los haya pedido el mismo cliente, pero ese es un atributo compartido, no una conexión.</p>
+<p>De manera similar, la configuración y el estado del juego de un jugador tienen poco que ver con las configuraciones de otros jugadores. Entidades como estas se modelan fácilmente con BD de clave-valor, de documentos o relacionales.</p>
+<p>En cambio, tenemos ejemplos como las autopistas que conectan ciudades, las proteínas que interactúan con otras proteínas y los empleados que trabajan con otros empleados. En todos estos casos, existe algún tipo de conexión, vínculo o relación directa entre dos instancias de entidades. </p>
+<p>Estos tipos de problemas son apropiados para el uso de BD de grafos. Otros ejemplos de este tipo de problemas incluirían:</p>
+<ul>
+<li>Gestión de infraestructura de TI y redes.</li>
+<li>Gestión de identidades y accesos.</li>
+<li>Gestión de procesos empresariales.</li>
+<li>Recomendación de productos y servicios.</li>
+<li>Redes sociales.</li>
+</ul>
+<p>En estos ejemplos resulta claro que existe la necesidad de modelar relaciones explícitas entre entidades y de recorrer rápidamente rutas entre entidades.</p>
+<p><strong>Ejemplos</strong>: Neo4j, Amazon Neptune, Azure CosmosDB.</p>
+<h3 id="basadas-en-series-temporales">Basadas en series temporales</h3>
+<p>Los datos de series temporales son una secuencia de puntos de datos registrados durante un intervalo de tiempo. Este tipo de datos se utiliza para medir eventos que cambian con el tiempo. Algunos ejemplos son los siguientes:</p>
+<ul>
+<li>Precios de las acciones a lo largo del tiempo.</li>
+<li>Mediciones de temperatura a lo largo del tiempo.</li>
+<li>Utilización de la CPU de una máquina virtual a lo largo del tiempo.</li>
+</ul>
+<p>Con los datos de series temporales, cada punto de datos consta de una marca de tiempo, uno o más atributos y el evento que cambia con el tiempo. Estos datos se pueden utilizar para obtener información sobre el rendimiento y el estado de una aplicación, detectar anomalías e identificar oportunidades de optimización. </p>
+<p>Por ejemplo, los ingenieros de DevOps pueden querer ver datos que midan los cambios en las métricas de rendimiento de la infraestructura. Los fabricantes pueden querer rastrear los datos de los sensores de IoT que miden los cambios en los equipos de una instalación. Los vendedores en línea pueden querer analizar los datos de flujo de clics que capturan cómo un usuario navega por un sitio web a lo largo del tiempo. Debido a que los datos de series temporales se generan a partir de múltiples fuentes en volúmenes extremadamente altos, deben recopilarse de manera rentable casi en tiempo real y, por lo tanto, requieren un almacenamiento eficiente que ayude a organizar y analizar los datos.</p>
+<p>Una base de datos contiene 0 o más tablas. Cada tabla contiene 0 o más series temporales. Cada serie temporal consta de una secuencia de registros a lo largo de un intervalo de tiempo determinado con una granularidad especificada. Cada serie temporal se puede describir utilizando sus metadatos o dimensiones, sus datos o medidas y sus marcas de tiempo.</p>
+<figure style="align: center;">
+    <img src="./images/series-temporales.png">
+    <figcaption>Series temporales</figcaption>
+</figure>
+
+<p><strong>Ejemplos</strong>: InfluxDB, Amazon Timestream, Azure Data Explorer.</p>
+<h2 id="amazon-dynamodb">Amazon DynamoDB</h2>
+<p>Amazon DynamoDB es un servicio de base de datos NoSQL sin servidor que permite desarrollar aplicaciones modernas a cualquier escala. Al ser una base de datos sin servidor, solo se paga por lo que se usa y DynamoDB escala a cero, no tiene arranques en frío, actualizaciones de versión, periodos de mantenimiento, parches ni tiempo de inactividad debido a tareas de mantenimiento. </p>
+<p>DynamoDB ofrece un amplio conjunto de controles de seguridad y estándares de cumplimiento. </p>
+<h3 id="elementos">Elementos</h3>
+<p>En DynamoDB se trabaja principalmente con tablas, elementos y atributos. Una tabla es una colección de elementos y cada elemento es una colección de atributos. DynamoDB utiliza claves principales para identificar de forma exclusiva cada uno de los elementos de la tabla e índices secundarios para proporcionar mayor flexibilidad a la hora de realizar consultas. Se pueden utilizar DynamoDB Streams para capturar los eventos de modificación de datos en las tablas de DynamoDB.</p>
+<h3 id="caracteristicas-de-dynamodb">Características de DynamoDB</h3>
+<p>A continuación, se detallan algunas de las características de DynamoDB.</p>
+<h4 id="sin-servidor">Sin servidor</h4>
+<p>Con DynamoDB, no se necesita aprovisionar ningún servidor ni aplicar parches, administrar, instalar, mantener ni operar ningún software. DynamoDB proporciona mantenimiento sin ningún tiempo de inactividad. No tiene versiones (principal, secundaria o de parche) y no hay periodos de mantenimiento. </p>
+<p>El modo de capacidad bajo demanda de DynamoDB ofrece precios de pago por uso para las solicitudes de lectura y escritura, por lo que solo se paga por lo que se utiliza. Con la característica bajo demanda, DynamoDB escala o reduce verticalmente al instante las tablas para ajustarse a la capacidad y mantiene el rendimiento sin necesidad de administración. También se reduce verticalmente a cero, por lo que no se tiene que pagar por el rendimiento si la tabla no tiene tráfico y no hay arranques en frío.</p>
+<h4 id="nosql">NoSQL</h4>
+<p>Como base de datos NoSQL, DynamoDB está diseñada específicamente para ofrecer un mejor rendimiento, escalabilidad, capacidad de administración y flexibilidad en comparación con las bases de datos relacionales tradicionales. Para admitir una amplia variedad de casos de uso, DynamoDB permite modelos de datos de documentos y de clave-valor.</p>
+<p>A diferencia de las bases de datos relacionales, DynamoDB no admite el operador JOIN. Se recomienda desnormalizar el modelo de datos para reducir los viajes de ida y vuelta a la base de datos y la potencia de procesamiento necesaria para responder a las consultas. Como base de datos NoSQL, DynamoDB proporciona una sólida coherencia de lectura y transacciones ACID para crear aplicaciones empresariales.</p>
+<h4 id="totalmente-administrado">Totalmente administrado</h4>
+<p>Al ser un servicio de bases de datos totalmente administrado, DynamoDB se ocupa del trabajo pesado e indiferenciado que supone administrar una base de datos. Se encarga de la instalación, las configuraciones, el mantenimiento, la alta disponibilidad, el aprovisionamiento de hardware, la seguridad, las copias de seguridad, la monitorización y mucho más. Esto garantiza que, al crear una tabla de DynamoDB, esté lista al instante para las cargas de trabajo de producción. DynamoDB mejora constantemente su disponibilidad, fiabilidad, rendimiento, seguridad y funcionalidad sin necesidad de actualizaciones ni tiempo de inactividad.</p>
+<h4 id="rendimiento-de-milisegundos-de-un-solo-digito-a-cualquier-escala">Rendimiento de milisegundos de un solo dígito a cualquier escala</h4>
+<p>DynamoDB se creó específicamente para mejorar el rendimiento y la escalabilidad de las bases de datos relacionales a fin de ofrecer un rendimiento de milisegundos de un solo dígito a cualquier escala. Para lograr esta escala y rendimiento, DynamoDB está optimizado para cargas de trabajo de alto rendimiento y proporciona una API que fomenta el uso eficiente de las bases de datos. Omite las características que son ineficientes y que no ofrecen rendimiento a gran escala como, por ejemplo, las operaciones JOIN. DynamoDB ofrece un rendimiento constante de milisegundos de un solo dígito para su aplicación, tanto si hay 100 como 100 millones de usuarios.</p>
+<h3 id="casos-de-uso-de-dynamodb">Casos de uso de DynamoDB</h3>
+<p>DynamoDB es ideal para casos de uso que requieren un rendimiento uniforme a cualquier escala con una sobrecarga operativa mínima o cero. La siguiente lista incluye algunos casos de uso en los que puede utilizar DynamoDB:</p>
+<ul>
+<li>
+<p><strong>Aplicaciones de servicios financieros</strong>: supongamos que trabaja en una empresa de servicios financieros que crea aplicaciones para el comercio y el enrutamiento en tiempo real, la administración de préstamos, generación de tokens y libros de transacciones. Con las tablas globales de DynamoDB, sus aplicaciones pueden responder a los eventos y atender el tráfico de las Regiones de AWS de su elección con un rendimiento de lectura y escritura rápido y local. 
+DynamoDB es adecuado para aplicaciones con los requisitos de disponibilidad más estrictos. Elimina la carga operativa que supone el escalado manual de las instancias para aumentar el almacenamiento o el rendimiento, el control de versiones y las licencias.
+Puede utilizar las transacciones de DynamoDB para lograr atomicidad, coherencia, aislamiento y durabilidad (ACID) en una o más tablas con una sola solicitud. Las transacciones (ACID) se adaptan a las cargas de trabajo que incluyen el procesamiento de transacciones financieras o la gestión de pedidos. DynamoDB se adapta de forma instantánea a sus cargas de trabajo cuando aumentan o disminuyen, lo que le permite escalar su base de datos de forma eficaz para adaptarse a las condiciones del mercado, como los horarios del mercado de valores.</p>
+</li>
+<li>
+<p><strong>Aplicaciones de juegos</strong>: se puede usar DynamoDB para todas las partes de las plataformas de juego como, por ejemplo, el estado del juego, los datos de los jugadores, el historial de sesiones y las tablas de clasificación. DynamoDB es ideal para las arquitecturas escalables horizontalmente necesarias en las que se basan los juegos de éxito. Reduce y escala horizontalmente de forma rápida el rendimiento del juego (escala a cero sin un arranque en frío). Esta escalabilidad optimiza la eficiencia de su arquitectura, ya sea para escalarla horizontalmente para los picos de tráfico o para reducirla horizontalmente de nuevo cuando el uso del juego sea bajo.</p>
+</li>
+<li>
+<p><strong>Aplicaciones de streaming</strong>: las empresas de medios y entretenimiento utilizan DynamoDB como índice de metadatos para el contenido, los servicios de administración del contenido o para ofrecer estadísticas deportivas casi en tiempo real. También utilizan DynamoDB para ejecutar servicios de listas de control y marcadores de los usuarios y procesar miles de millones de eventos diarios de los clientes para generar recomendaciones. Estos clientes se benefician de la escalabilidad, el rendimiento y la resiliencia de DynamoDB. DynamoDB se adapta a los cambios en la carga de trabajo a medida que aumentan o disminuyen, lo que facilita los casos de uso con contenido multimedia en streaming que pueden tener cualquier nivel de demanda.</p>
+</li>
+</ul>
+<h3 id="costes">Costes</h3>
+<p>DynamoDB cobra por leer, escribir y almacenar datos en sus tablas, además de cualquier característica opcional que decida habilitar. DynamoDB dispone de dos modos de capacidad con sus respectivas opciones de facturación para procesar lecturas y escrituras en sus tablas: bajo demanda y aprovisionado.</p>
+<ul>
+<li>
+<p><strong>Bajo demanda</strong>: Amazon DynamoDB bajo demanda es una opción de facturación sin servidor que puede atender millones de solicitudes por segundo sin necesidad de planificar la capacidad. DynamoDB bajo demanda ofrece precios de pago por solicitud para las solicitudes de lectura y escritura. De este modo, únicamente se paga por aquello que se utiliza.</p>
+</li>
+<li>
+<p><strong>Aprovisionado</strong>: Al crear una nueva tabla aprovisionada en DynamoDB, se debe especificar su capacidad de rendimiento aprovisionada. Esta es la cantidad de rendimiento de lectura y escritura que puede soportar la tabla. DynamoDB utiliza esta información para asegurarse de que hay suficientes recursos del sistema para satisfacer sus necesidades de rendimiento.</p>
+</li>
+</ul>
+<p>DynamoDB también ofrece una capa gratuita que ofrece 25 GB de almacenamiento. La capa gratuita también incluye 25 unidades de capacidad de escritura aprovisionadas y 25 unidades de capacidad de lectura (WCU, RCU) aprovisionadas, lo que es suficiente para administrar 200 millones de solicitudes al mes.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
