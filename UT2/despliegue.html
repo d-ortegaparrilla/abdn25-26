@@ -639,6 +639,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#parameter-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option groups
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -879,6 +897,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#parameter-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option groups
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1053,6 +1089,30 @@ Un comando sencillo para listar las instancias de base de datos en RDS sería:</
 <li><strong>Despliegue Multi-AZ</strong>: Habilita el despliegue Multi-AZ para asegurar alta disponibilidad y recuperación rápida ante fallos.</li>
 <li><strong>Copias de seguridad automáticas</strong>: Configura copias de seguridad automáticas para proteger tus datos y permitir restauraciones puntuales.</li>
 </ul>
+<h3 id="parameter-groups">Parameter groups</h3>
+<p>Los grupos de parámetros (<strong>parameter groups</strong>) se asignan a las bases de datos para definir configuraciones como el tamaño del búfer de la instancia, <code>max_connections</code> y parámetros que controlan el comportamiento de las consultas.</p>
+<p>En RDS, para modificar los parámetros definidos en <code>postgres.conf</code>, <code>my.cnf</code> o <code>init.ora</code>, se personalizan mediante los grupos de parámetros.</p>
+<p>Cada motor de base de datos (MySQL, PostgreSQL, Oracle, MariaDB y SQL Server) tiene su propio grupo de parámetros estándar y una versión específica. Este grupo de parámetros, específico del motor y la versión, incluye varios parámetros precalculados según la clase de instancia de la base de datos.</p>
+<p>Si se necesita personalizar un parámetro específico, se debe crear un nuevo grupo de parámetros basado en uno existente y, a continuación, asignarlo a la instancia de base de datos. Esta modificación requiere reiniciar manualmente la instancia de base de datos para que el cambio surta efecto.</p>
+<p>Los parámetros se dividen en <strong>estáticos</strong> (si se cambia de valor se ha de reiniciar la instancia) y <strong>dinámicos</strong> (no es necesario reiniciar la instancia). </p>
+<h3 id="option-groups">Option groups</h3>
+<p>Un grupo de opciones (<strong>option groups</strong>) se utiliza para controlar qué características están habilitadas en las bases de datos. Cada base de datos RDS se asocia a un grupo de opciones al aprovisionarse. Los grupos predeterminados se crean para cada motor de base de datos y versión. Se pueden crear grupos de opciones personalizados, y cada uno solo puede asociarse a bases de datos implementadas con el mismo motor y versión. Por ejemplo, se necesitan dos grupos de opciones diferentes para admitir tanto una base de datos Oracle versión 19 como una versión 12.</p>
+<p>Para agregar opciones al grupo, se han de seleccionar de la lista y aplicar los cambios. Algunos ejemplos de las opciones disponibles son:</p>
+<ul>
+<li>
+<p><strong>Oracle</strong>: APEX, OEM, OEM Agent, integración con S3 e informes AWR.</p>
+</li>
+<li>
+<p><strong>SQL Server</strong>: Auditoría de SQL Server, SSIS y SSAS.</p>
+</li>
+<li>
+<p><strong>MySQL</strong>: Memcached y auditoría de MariaDB.</p>
+</li>
+<li>
+<p><strong>MariaDB</strong>: Auditoría de MariaDB.</p>
+</li>
+</ul>
+<p>Algunas de estas opciones requieren tiempo de inactividad para la aplicación, por lo que se puede optar por implementar los cambios de inmediato o esperar hasta la ventana de mantenimiento. Cualquier cambio que se aplique a un grupo de opciones afectará a todas las bases de datos asociadas a dicho grupo, por lo que puede ser una forma rápida de añadir opciones a un gran número de bases de datos. Sin embargo, hay que tener en cuenta que cualquier interrupción del servicio afectará a todas las bases de datos del grupo.</p>
 
 
 
