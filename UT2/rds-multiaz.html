@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../UT1/no-relacionales.html">
+        <link rel="prev" href="rds.html">
       
-      
-        <link rel="next" href="rds.html">
       
       
       <link rel="icon" href="../favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Introducción - Administración de Bases de Datos en la Nube</title>
+        <title>Despliegue Multi-AZ en Amazon RDS - Administración de Bases de Datos en la Nube</title>
       
     
     
@@ -70,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion" class="md-skip">
+        <a href="#despliegue-multi-az" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -105,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introducción
+              Despliegue Multi-AZ en Amazon RDS
             
           </span>
         </div>
@@ -373,32 +371,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Introducción
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="introduccion.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="introduccion.html" class="md-nav__link">
         
   
   
@@ -409,44 +385,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#de-las-bases-de-datos-en-las-instalaciones-a-las-bases-de-datos-en-la-nube" class="md-nav__link">
-    <span class="md-ellipsis">
-      De las bases de datos en las instalaciones a las bases de datos en la nube
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuando-usar-amazon-rds" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cuándo usar Amazon RDS
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -479,10 +417,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="rds-multiaz.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Despliegue Multi-AZ en Amazon RDS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="rds-multiaz.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -493,6 +453,110 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#replicas-de-lectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Réplicas de lectura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-despliegues-multi-az" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de despliegues Multi-AZ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de despliegues Multi-AZ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#despliegue-multi-az-replica-en-espera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Despliegue Multi-AZ. Réplica en espera
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#despliegue-multi-az-replica-en-espera-replica-de-lectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Despliegue Multi-AZ. Réplica en espera + réplica de lectura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-multi-az" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clúster Multi-AZ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clúster Multi-AZ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cluster-multi-az-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cluster Multi-AZ endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-parameter-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cluster parameter group
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retraso-de-replica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retraso de réplica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -532,20 +596,86 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#de-las-bases-de-datos-en-las-instalaciones-a-las-bases-de-datos-en-la-nube" class="md-nav__link">
+  <a href="#replicas-de-lectura" class="md-nav__link">
     <span class="md-ellipsis">
-      De las bases de datos en las instalaciones a las bases de datos en la nube
+      Réplicas de lectura
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuando-usar-amazon-rds" class="md-nav__link">
+  <a href="#tipos-de-despliegues-multi-az" class="md-nav__link">
     <span class="md-ellipsis">
-      Cuándo usar Amazon RDS
+      Tipos de despliegues Multi-AZ
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Tipos de despliegues Multi-AZ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#despliegue-multi-az-replica-en-espera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Despliegue Multi-AZ. Réplica en espera
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#despliegue-multi-az-replica-en-espera-replica-de-lectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Despliegue Multi-AZ. Réplica en espera + réplica de lectura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-multi-az" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clúster Multi-AZ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clúster Multi-AZ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cluster-multi-az-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cluster Multi-AZ endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-parameter-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cluster parameter group
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retraso-de-replica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retraso de réplica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -565,22 +695,54 @@
 
 
 
-<h1 id="introduccion">Introducción</h1>
-<p>La administración de bases de datos en la nube implica la gestión eficiente de sistemas de bases de datos alojados en plataformas de computación en la nube, como AWS, Microsoft Azure y Google Cloud. A diferencia de la administración tradicional de bases de datos, donde los administradores gestionaban tanto el hardware como el software localmente, en la nube muchas de estas responsabilidades son asumidas por los proveedores de servicios, lo que permite a los administradores centrarse en tareas más estratégicas como la optimización del rendimiento, la seguridad y la disponibilidad de los datos.</p>
-<p>La administración en la nube incluye la configuración inicial, la gestión de usuarios y permisos, la monitorización continua del rendimiento, la implementación de estrategias de escalabilidad automática y la planificación de la recuperación ante desastres. Los servicios gestionados en la nube simplifican estos procesos, automatizando tareas como la aplicación de parches, copias de seguridad y actualizaciones, lo que permite a las organizaciones aprovechar las capacidades de la nube para aumentar la eficiencia operativa y reducir los costes asociados con la administración de bases de datos.</p>
-<p>El <strong>despliegue de una base de datos relacional en la nube</strong> se refiere al proceso de instalar, configurar y ejecutar una base de datos relacional (RDBMS) en una <strong>infraestructura de computación en la nube</strong>. En lugar de alojar la base de datos en servidores locales (on-premise), se utiliza una plataforma en la nube, lo que ofrece ventajas en términos de escalabilidad, flexibilidad y costes operativos. </p>
-<h2 id="de-las-bases-de-datos-en-las-instalaciones-a-las-bases-de-datos-en-la-nube">De las bases de datos en las instalaciones a las bases de datos en la nube</h2>
+<h1 id="despliegue-multi-az">Despliegue Multi-AZ</h1>
+<h2 id="replicas-de-lectura">Réplicas de lectura</h2>
+<p>Para crear una réplica de lectura en otra zona de disponibilidad, la instancia RDS debe tener activada los <strong>backups con una retención de más de 0 días</strong>.</p>
+<p>Para ello utiliza la opción dentro del menú <strong>Actions</strong>.</p>
+<p>Al crear una réplica de lectura, se especifica una instancia de base de datos existente como origen. Amazon RDS toma una instantánea de la instancia de origen y crea una instancia de solo lectura a partir de dicha instantánea. Posteriormente, Amazon RDS utiliza el método de replicación <strong>asíncrona</strong> del motor de base de datos para actualizar la réplica de lectura cada vez que se produce un cambio en la instancia de base de datos principal.</p>
+<p>La réplica de lectura funciona como una instancia de base de datos que solo permite conexiones de lectura.</p>
+<p>En este tipo de despliegues se generan dos <strong>endpoints</strong>: uno para escritura (y lectura) y otro únicamente para lectura.</p>
 <figure>
-  <img alt="nube" src="images/nube.png" />
+  <img alt="lectura" src="images/lectura.png" />
 </figure>
-<p>Cuando la base de datos está en las instalaciones, el administrador de la base de datos es responsable de todo. Las tareas de administración de la base de datos incluyen la optimización de las aplicaciones y las consultas, la configuración del hardware, la aplicación de parches al hardware, la configuración y alimentación de las redes y la gestión de la calefacción, la ventilación y el aire acondicionado.</p>
-<p>Si se cambia a una base de datos que se ejecuta en una instancia de <strong>Amazon Elastic Compute Cloud</strong> (<strong>Amazon EC2</strong>), ya no habrá que administrar el hardware subyacente ni encargarse de las operaciones del centro de datos. Sin embargo, habrá que ocuparse de la aplicación de parches al SO y todas las operaciones de software y copia de seguridad.</p>
-<p>Al instalar una base de datos en Amazon RDS o Amazon Aurora, se reducen las responsabilidades administrativas. Si se migra a la nube, se puede escalar la base de datos, habilitar la alta disponibilidad, administrar las copias de seguridad y aplicar parches automáticamente. Así, los clientes pueden centrarse en lo que realmente importa: optimizar su aplicación.</p>
-<h2 id="cuando-usar-amazon-rds">Cuándo usar Amazon RDS</h2>
-<p>RDS es la solución de base de datos relacional convencional, pero a veces no será lo más adecuado según necesidades, y en AWS hay servicios más específicos como DynamoDB (NoSQL) y Redshift (Datawarehouse):</p>
+<h2 id="tipos-de-despliegues-multi-az">Tipos de despliegues Multi-AZ</h2>
+<p>Los despliegues Multi-AZ pueden tener una o dos instancias de base de datos en espera. Cuando el despliegue tiene una sola instancia de base de datos en espera, se denomina <strong>despliegue de instancia de base de datos Multi-AZ</strong>. Este despliegue cuenta con una instancia en espera que proporciona soporte de conmutación por error, pero no procesa tráfico de lectura. Cuando el despliegue tiene dos instancias en espera, se denomina <strong>despliegue de clúster de base de datos Multi-AZ</strong>. Este despliegue cuenta con instancias en espera que proporcionan soporte de conmutación por error y también pueden procesar tráfico de lectura.</p>
+<h3 id="despliegue-multi-az-replica-en-espera">Despliegue Multi-AZ. Réplica en espera</h3>
+<p>Se puede crear una réplica en espera (standby) en otra zona de disponibilidad si la instancia está encendida, usando la opción <strong>Modify</strong>.</p>
+<p>Este tipo de despliegue se le denomina despliegue Multi-AZ.</p>
 <figure>
-  <img alt="uso-rds" src="images/uso-rds.png" />
+  <img alt="multiaz" src="images/multiaz.png" />
 </figure>
+<p>Las réplicas en standby se replican <strong>síncronamente</strong> para asegurar el funcionamiento ante una caída de la instancia principal. Esto puede aumentar la latencia de escritura al tener que escribirse los datos en ambas instancias síncronamente. También puede aumentar la latencia en caso de caída de la instancia principal, mientras se activa la instancia de standby.</p>
+<h3 id="despliegue-multi-az-replica-en-espera-replica-de-lectura">Despliegue Multi-AZ. Réplica en espera + réplica de lectura</h3>
+<p>En un despliegue Multi-AZ, se puede configurar una réplica de lectura para una instancia de base de datos que también tenga una réplica en espera configurada para alta disponibilidad. <strong>La replicación con la réplica en espera es síncrona</strong>. A diferencia de una réplica de lectura, una réplica en espera no puede procesar tráfico de lectura.</p>
+<p>En el siguiente escenario, los clientes tienen acceso de lectura/escritura a una instancia de base de datos principal en una zona de disponibilidad. <strong>La instancia principal copia las actualizaciones de forma asíncrona a una réplica de lectura</strong> en una segunda zona de disponibilidad y también las copia de forma síncrona a una réplica en espera en una tercera zona de disponibilidad. Los clientes solo tienen acceso de lectura a la réplica de lectura.</p>
+<figure>
+  <img alt="multiaz-lectura" src="images/multiaz-lectura.png" />
+</figure>
+<h3 id="cluster-multi-az">Clúster Multi-AZ</h3>
+<p>Con un clúster de base de datos Multi-AZ, se replican los datos de la instancia de base de datos de escritura a ambas instancias de lectura mediante las capacidades de replicación nativas del motor de base de datos. Cuando se realiza un cambio en la instancia de base de datos de escritura, este se envía a cada instancia de lectura.</p>
+<p>Los despliegues de clústeres de base de datos Multi-AZ utilizan la replicación <strong>semisíncrona</strong>, que requiere la confirmación de al menos una instancia de lectura para que se confirme un cambio. No requiere la confirmación de que los eventos se hayan ejecutado y confirmado por completo en todas las réplicas.</p>
+<p>Las instancias de lectura actúan como destinos de conmutación por error automáticos y también gestionan el tráfico de lectura para aumentar el rendimiento de lectura de la aplicación. Si se produce una interrupción en la instancia de escritura, RDS gestiona la conmutación por error a una de las instancias de lectura. RDS realiza esta conmutación en función de qué instancia de lectura tenga el registro de cambios más reciente.</p>
+<figure>
+  <img alt="cluster" src="images/cluster.png" />
+</figure>
+<h4 id="cluster-multi-az-endpoints">Cluster Multi-AZ endpoints</h4>
+<p><strong>Cluster endpoint</strong>
+Se conecta a la instancia de escritura actual de dicho clúster. Este punto de conexión es el único que puede realizar operaciones de escritura, como instrucciones DDL y DML. También puede realizar operaciones de lectura.</p>
+<p>Cada clúster de bases de datos Multi-AZ tiene un cluster endpoint y una instancia de base de datos de escritura.</p>
+<p>Si la instancia de escritura actual de un clúster de bases de datos falla, el clúster Multi-AZ conmuta automáticamente a una nueva instancia de escritura. Durante la conmutación por error, el clúster continúa atendiendo las solicitudes de conexión al punto de conexión de clúster desde la nueva instancia de escritura, con una interrupción mínima del servicio.</p>
+<p><strong>Reader endpoint</strong>
+Proporciona compatibilidad con conexiones de solo lectura al clúster de base de datos, como consultas SELECT. Al procesar estas instrucciones en las instancias de lectura, este punto de conexión reduce la sobrecarga en la instancia de base de datos de escritura. También ayuda al clúster a escalar la capacidad para gestionar consultas SELECT simultáneas. Cada clúster Multi-AZ tiene un punto de conexión de lectura.</p>
+<p>El punto de conexión de lectura envía cada solicitud de conexión a una de las instancias de base de datos de lectura. </p>
+<p><strong>Instance endpoint</strong>
+Se conecta a una instancia de base de datos específica dentro de un clúster de base de datos Multi-AZ.</p>
+<p>Cada instancia en un clúster tiene su propio endpoint. El endpoint proporciona control directo sobre las conexiones al clúster. Por ejemplo, en escenarios donde una aplicación cliente podría requerir un balanceado de carga más preciso según el tipo de carga de trabajo. En este caso, se pueden configurar varios clientes para que se conecten a diferentes instancias de lectura en el clúster y así distribuir las cargas de lectura.</p>
+<h4 id="cluster-parameter-group">Cluster parameter group</h4>
+<p>En un clúster de base de datos Multi-AZ, un <strong>cluster parameter group</strong> de base de datos actúa como contenedor de los valores de configuración del motor que se aplican a todas las instancias de base de datos del clúster. La configuración del cluster parameter group se utiliza para todas las instancias de base de datos del clúster.</p>
+<h3 id="retraso-de-replica">Retraso de réplica</h3>
+<p>El retraso de réplica es la diferencia de tiempo entre la última transacción en la instancia de base de datos de escritura y la última transacción aplicada en una instancia de lectura. La métrica <strong>ReplicaLag</strong> de <strong>Amazon CloudWatch</strong> representa esta diferencia de tiempo. </p>
+<p>Aunque los clústeres de bases de datos Multi-AZ permiten un alto rendimiento de escritura, puede producirse un retraso de réplica debido a la naturaleza de la replicación basada en motor. Dado que cualquier conmutación por error debe resolver el retraso de réplica antes de promover una nueva instancia de base de datos de escritor, es importante supervisar este valor.</p>
 
 
 

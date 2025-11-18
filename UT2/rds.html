@@ -12,13 +12,15 @@
         <link rel="prev" href="introduccion.html">
       
       
+        <link rel="next" href="rds-multiaz.html">
+      
       
       <link rel="icon" href="../favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>Despliegue de Bases de Datos Relacionales en la Nube - Administración de Bases de Datos en la Nube</title>
+        <title>Amazon RDS - Administración de Bases de Datos en la Nube</title>
       
     
     
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#despliegue-de-bases-de-datos-relacionales-en-la-nube" class="md-skip">
+        <a href="#amazon-rds" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -103,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Despliegue de Bases de Datos Relacionales en la Nube
+              Amazon RDS
             
           </span>
         </div>
@@ -411,7 +413,7 @@
   
   
   <span class="md-ellipsis">
-    Despliegue de Bases de Datos Relacionales en la Nube
+    Amazon RDS
     
   </span>
   
@@ -419,12 +421,12 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="despliegue.html" class="md-nav__link md-nav__link--active">
+      <a href="rds.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Despliegue de Bases de Datos Relacionales en la Nube
+    Amazon RDS
     
   </span>
   
@@ -447,16 +449,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#amazon-rds" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon RDS
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Amazon RDS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#instancias-de-bases-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Instancias de Bases de Datos
@@ -464,8 +456,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#motores-de-bases-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Motores de Bases de Datos
@@ -473,8 +465,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#clase-de-instancia-de-base-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Clase de instancia de Base de Datos
@@ -482,8 +474,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#almacenamiento-de-instancias-de-base-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Almacenamiento de instancias de base de datos
@@ -491,8 +483,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#amazon-virtual-private-cloud-amazon-vpc" class="md-nav__link">
     <span class="md-ellipsis">
       Amazon Virtual Private Cloud (Amazon VPC)
@@ -500,8 +492,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#regiones-y-zonas-de-disponibilidad" class="md-nav__link">
     <span class="md-ellipsis">
       Regiones y zonas de disponibilidad
@@ -509,8 +501,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#grupos-de-seguridad" class="md-nav__link">
     <span class="md-ellipsis">
       Grupos de Seguridad
@@ -518,8 +510,26 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#parameter-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter groups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option groups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supervision-de-amazon-rds" class="md-nav__link">
     <span class="md-ellipsis">
       Supervisión de Amazon RDS
@@ -527,8 +537,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#como-trabajar-con-amazon-rds" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo trabajar con Amazon RDS
@@ -569,8 +579,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#como-se-cobra-amazon-rds" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo se cobra Amazon RDS
@@ -578,8 +588,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#buenas-practicas-seguridad" class="md-nav__link">
     <span class="md-ellipsis">
       Buenas prácticas (seguridad)
@@ -638,34 +648,34 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#parameter-groups" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameter groups
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-groups" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option groups
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rds-multiaz.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Despliegue Multi-AZ en Amazon RDS
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -705,16 +715,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#amazon-rds" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon RDS
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Amazon RDS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#instancias-de-bases-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Instancias de Bases de Datos
@@ -722,8 +722,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#motores-de-bases-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Motores de Bases de Datos
@@ -731,8 +731,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#clase-de-instancia-de-base-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Clase de instancia de Base de Datos
@@ -740,8 +740,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#almacenamiento-de-instancias-de-base-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
       Almacenamiento de instancias de base de datos
@@ -749,8 +749,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#amazon-virtual-private-cloud-amazon-vpc" class="md-nav__link">
     <span class="md-ellipsis">
       Amazon Virtual Private Cloud (Amazon VPC)
@@ -758,8 +758,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#regiones-y-zonas-de-disponibilidad" class="md-nav__link">
     <span class="md-ellipsis">
       Regiones y zonas de disponibilidad
@@ -767,8 +767,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#grupos-de-seguridad" class="md-nav__link">
     <span class="md-ellipsis">
       Grupos de Seguridad
@@ -776,8 +776,26 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#parameter-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter groups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option groups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supervision-de-amazon-rds" class="md-nav__link">
     <span class="md-ellipsis">
       Supervisión de Amazon RDS
@@ -785,8 +803,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#como-trabajar-con-amazon-rds" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo trabajar con Amazon RDS
@@ -827,8 +845,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#como-se-cobra-amazon-rds" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo se cobra Amazon RDS
@@ -836,8 +854,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#buenas-practicas-seguridad" class="md-nav__link">
     <span class="md-ellipsis">
       Buenas prácticas (seguridad)
@@ -896,29 +914,6 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#parameter-groups" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameter groups
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-groups" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option groups
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -936,22 +931,20 @@
 
 
 
-<h1 id="despliegue-de-bases-de-datos-relacionales-en-la-nube">Despliegue de Bases de Datos Relacionales en la nube</h1>
-<p>El despliegue de una base de datos relacional en la nube se refiere al proceso de instalar, configurar y ejecutar una base de datos relacional (RDBMS) en una infraestructura de computación en la nube, como por ejemplo AWS. Para llevar a cabo el despliegue de una BD relacional en la nube, utilizaremos servicios como RDS y Aurora.</p>
-<h2 id="amazon-rds">Amazon RDS</h2>
+<h1 id="amazon-rds">Amazon RDS</h1>
 <figure>
   <img alt="rds" src="images/rds.png" />
 </figure>
 <p><strong>Amazon RDS</strong> es un <strong>servicio administrado</strong> que configura y opera una <strong>base de datos relacional en la nube</strong>. Esto significa que ofrece una capa sobre la base de datos relacional que gestiona muchas de las funciones que normalmente lleva a cabo un DBA (DataBase Administrator). El objetivo es reducir el tiempo que un DBA emplea haciendo trabajo de administración, permitiendo que se pueda centrar en otras tareas.</p>
 <p>Para hacer frente a los desafíos de ejecutar una base de datos relacional independiente y no administrada, AWS proporciona un servicio que configura, opera y escala la base de datos relacional sin ninguna administración continua. Amazon RDS proporciona una capacidad rentable y de tamaño modificable, al tiempo que automatiza las tareas administrativas que consumen mucho tiempo.</p>
 <p>Amazon RDS habilita estas tareas para que el usuario pueda centrarse en las aplicaciones y proporcionarles el rendimiento, la alta disponibilidad, la seguridad y la compatibilidad que necesitan. Con Amazon RDS, los usuarios pueden centrarse principalmente en los datos y en optimizar sus aplicaciones.</p>
-<h3 id="instancias-de-bases-de-datos">Instancias de Bases de Datos</h3>
+<h2 id="instancias-de-bases-de-datos">Instancias de Bases de Datos</h2>
 <p>Una <strong>instancia de base de datos</strong> es un entorno de base de datos aislado en la Nube de AWS. El componente básico de Amazon RDS es la instancia de base de datos.</p>
 <p>Una instancia de base de datos puede contener una o más bases de datos (database, tablespace, etc.) creadas por el usuario. Se puede acceder a una instancia de base de datos utilizando las mismas herramientas y aplicaciones que se utilizan con una instancia de base de datos independiente, como Workbench en el caso de MySQL. </p>
 <p>Se puede crear y modificar una instancia de base de datos mediante AWS Command Line Interface (AWS CLI), la API de Amazon RDS o la AWS Management Console.</p>
 <p>Ya hemos utilizado dos de estos métodos previamente. Más adelante lo podemos hacer también con la API.</p>
 <p>Ejemplo de uso de <strong>varias instancias</strong>: una organización con una base de datos de empleados podría tener tres instancias diferentes: <em>producción</em> (utilizada para contener datos en tiempo real), <em>pre-producción</em> (utilizada para probar nuevas funcionalidades antes de la puesta en producción) y <em>desarrollo</em> (utilizada por los desarrolladores de bases de datos para crear nuevas funcionalidades). </p>
-<h3 id="motores-de-bases-de-datos">Motores de Bases de Datos</h3>
+<h2 id="motores-de-bases-de-datos">Motores de Bases de Datos</h2>
 <p>Un <strong>motor de base de datos</strong> es el <strong>software</strong> de base de datos relacional específico <strong>que se ejecuta en la instancia</strong> de base de datos. Amazon RDS admite actualmente los siguientes motores:</p>
 <ul>
 <li>MySQL (desde la versión 5.7, en adelante)</li>
@@ -969,11 +962,11 @@
 <li><strong>Bring-your-own-license</strong>: obtienes las licencias de tus bases de datos directamente del vendedor (Oracle o Microsoft). </li>
 </ul>
 <p>Además, cada motor de base de datos tiene un conjunto de parámetros en un grupo de parámetros de base de datos que controlan el comportamiento de las bases de datos que administra.</p>
-<h3 id="clase-de-instancia-de-base-de-datos">Clase de instancia de Base de Datos</h3>
+<h2 id="clase-de-instancia-de-base-de-datos">Clase de instancia de Base de Datos</h2>
 <p>Una <strong>clase de instancia de base de datos</strong> determina la capacidad de <strong>cómputo</strong> y de <strong>memoria</strong> de una instancia de base de datos. Una clase de instancia de base de datos consta tanto del <strong>tipo de instancia</strong> de base de datos como del <strong>tamaño</strong>. Cada tipo de instancia ofrece diferentes capacidades de computación, memoria y almacenamiento. Por ejemplo, db.m6g es un tipo de instancia de base de datos de uso general con tecnología de procesadores Graviton2 de AWS. Dentro del tipo de instancia <strong>db.m6g</strong>, <strong>db.m6g.2xlarge</strong> es una clase de instancia de base de datos.</p>
 <p>Una cosa a tener en cuenta es la licencia de Oracle y SQL Server. Ambos tienen una licencia en un <strong>per-core model</strong>, donde pagas según el número de núcleos que utilizas. En ese caso, podría ser más eficiente a nivel de coste, elegir una clase de instancia con un ratio con mucha más memoria que CPU, para poder optimizar el coste que supone la licencia.</p>
 <p>Para obtener más información, se recomienda consultar el siguiente enlace: <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.Types.html">Clases de instancias de base de datos de Amazon RDS</a>.</p>
-<h3 id="almacenamiento-de-instancias-de-base-de-datos">Almacenamiento de instancias de base de datos</h3>
+<h2 id="almacenamiento-de-instancias-de-base-de-datos">Almacenamiento de instancias de base de datos</h2>
 <p>Amazon EBS (Elastic Block Store) ofrece volúmenes de almacenamiento permanente de nivel de bloque que se pueden adjuntar a una instancia en ejecución. Es decir, los volúmenes de EBS son unidades de almacenamiento que <strong>persisten</strong> incluso después de que la instancia que los utiliza se apague o se termine. Cuando un volumen de EBS se adjunta a una instancia, esta lo puede utilizar como un disco duro, permitiendo que la instancia escriba o lea datos del volumen. Esto puede hacerse <strong>mientras la instancia está funcionando</strong>, por lo que si es necesario, es posible adjuntar o separar (desconectar) volúmenes sin detener la instancia.</p>
 <p>El almacenamiento de instancias de base de datos viene en los siguientes tipos:
 - <strong>Uso general (SSD)</strong>. Llamada gp2 y gp3. Perfecto en entornos de pruebas y de desarrollo, para aprovisionamiento de rendimientos extremos.
@@ -981,10 +974,10 @@
 - <strong>Magnético</strong> (obsoleta, se mantiene por compatibilidad hacia atrás). Antigua y menos costosa, pero menor rendimiento que las anteriores.</p>
 <p>Los tipos de almacenamiento difieren en características de rendimiento y precio. Cada usuario puede adaptar el rendimiento y el coste del almacenamiento a las necesidades de su base de datos.</p>
 <p>Cada instancia de base de datos tiene requisitos de almacenamiento mínimos y máximos en función del tipo de almacenamiento y del motor de base de datos que admita. Es importante tener suficiente almacenamiento para que las bases de datos tengan espacio para crecer. Además, un almacenamiento suficiente garantiza que las funciones del motor de base de datos tengan espacio para escribir contenido o registrar entradas. Para obtener más información, se recomienda consultar el siguiente enlace: <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Almacenamiento de instancias de base de datos de Amazon RDS</a>.</p>
-<h3 id="amazon-virtual-private-cloud-amazon-vpc">Amazon Virtual Private Cloud (Amazon VPC)</h3>
+<h2 id="amazon-virtual-private-cloud-amazon-vpc">Amazon Virtual Private Cloud (Amazon VPC)</h2>
 <p>Una instancia de base de datos puede ejecutarse en una nube virtual privada (VPC) utilizando el servicio Amazon Virtual Private Cloud (Amazon VPC). Cuando se utiliza una VPC, se pueden  controlar todos los aspectos del entorno de red virtual. Es posible elegir el rango de direcciones IP, crear subredes y configurar listas de enrutamiento y control de acceso. La funcionalidad básica de Amazon RDS es la misma, tanto si se ejecuta en una VPC como si no. Amazon RDS administra las copias de seguridad, la aplicación de parches de software, la detección automática de errores y la recuperación. Es posible ejecutar la instancia de base de datos en una VPC sin ningún coste adicional. Para obtener más información acerca del uso de Amazon VPC con RDS, adjuntamos el siguiente enlace: <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html">VPC de Amazon y Amazon RDS</a>.</p>
 <p>Amazon RDS usa el protocolo de tiempo de red (NTP) para sincronizar la hora en las instancias de base de datos.</p>
-<h3 id="regiones-y-zonas-de-disponibilidad">Regiones y zonas de disponibilidad</h3>
+<h2 id="regiones-y-zonas-de-disponibilidad">Regiones y zonas de disponibilidad</h2>
 <p>Los recursos de informática en la nube de Amazon están alojados en instalaciones de centros de datos con alta disponibilidad, en diferentes zonas del mundo (por ejemplo, Norteamérica, Europa o Asia). Cada ubicación del centro de datos se denomina AWS región.</p>
 <p>Cada AWS <strong>región</strong> contiene varias ubicaciones distintas denominadas <strong>zonas de disponibilidad</strong> o <strong>AZ</strong>. Cada zona de disponibilidad está diseñada para quedar aislada en caso de error en otras zonas de disponibilidad. Cada una de ellas está diseñada para proporcionar conectividad de red económica y de baja latencia a otras zonas de disponibilidad de la misma AWS región. Al lanzar instancias en distintas zonas de disponibilidad, se protegen las aplicaciones de los errores que se puedan producirse en una única ubicación. Para obtener más información, AWS ofrece la siguiente guía: <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">Regiones, zonas de disponibilidad y Local Zones</a>.</p>
 <p>Cuando se ejecuta una instancia de base de datos en varias zonas de disponibilidad, esto recibe el nombre de despliegue <strong>Multi-AZ</strong>. Cuando se elige esta opción, Amazon aprovisiona automáticamente y mantiene una o más instancias de base de datos secundarias en espera en una zona de disponibilidad diferente. La instancia de base de datos principal se replica en todas las zonas de disponibilidad para cada instancia de base de datos secundaria. Es decir, la base de datos principal <strong>replica automáticamente todos los datos</strong> a las instancias secundarias en tiempo real. Esto garantiza que, en caso de que la base de datos principal falle, la instancia secundaria tenga una copia actualizada de los datos y pueda asumir el control sin pérdida de información o tiempo de inactividad significativo. Este enfoque ayuda a proporcionar redundancia de datos y soporte de conmutación por error, elimina los bloqueos de E/S y minimiza los picos de latencia durante las copias de seguridad del sistema. En una implementación de clústeres de base de datos Multi-AZ, las instancias de bases de datos secundarias también pueden ofrecer tráfico de lectura. En el siguiente enlace <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html">Configuración y administración de una implementación multi-AZ</a> se puede encontrar más información.</p>
@@ -998,7 +991,7 @@
     <figcaption>Despliegue MultiAZ con dos instancias en espera</figcaption>
 </figure>
 
-<h3 id="grupos-de-seguridad">Grupos de Seguridad</h3>
+<h2 id="grupos-de-seguridad">Grupos de Seguridad</h2>
 <p>Un grupo de seguridad es un componente crítico que controla el acceso a una instancia de base de datos en Amazon RDS. Actúa como un firewall virtual, definiendo reglas que determinan qué tráfico de red está permitido entrar o salir de la instancia. Estas reglas se basan en:</p>
 <ul>
 <li><strong>Rangos de direcciones IP</strong>: Es posible especificar intervalos de direcciones IP o redes específicas que pueden conectarse a la base de datos. Por ejemplo, se podría permitir acceso solo desde una dirección IP individual, como la de la red corporativa, o desde un rango de direcciones que cubre todas las máquinas del equipo.</li>
@@ -1017,85 +1010,13 @@
 <li><strong>Facilidad de modificación</strong>: Se pueden modificar las reglas del grupo de seguridad en cualquier momento sin reiniciar la instancia de base de datos. Los cambios se aplican inmediatamente, lo que permite ajustar el acceso de manera dinámica en función de necesidades de seguridad.</li>
 </ul>
 <p>Para obtener más detalles técnicos sobre cómo configurar y gestionar grupos de seguridad, así como mejores prácticas de seguridad en Amazon RDS, se recomienda consultar la documentación oficial de Seguridad en Amazon RDS en la guía <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.html">Seguridad en Amazon RDS</a>.</p>
-<h3 id="supervision-de-amazon-rds">Supervisión de Amazon RDS</h3>
-<p>Hay varias formas de hacer un seguimiento del desempeño y el estado de una instancia de base de datos. Se puede utilizar el servicio de Amazon CloudWatch para monitorear el rendimiento y el estado de una instancia de base de datos. Los gráficos de rendimiento de CloudWatch se muestran en la consola de Amazon RDS. También es posible suscribirse a eventos de Amazon RDS si se desea recibir notificaciones sobre cambios en una instancia de base de datos, una instantánea de base de datos o un grupo de parámetros de base de datos.</p>
-<p>Para obtener más información, se adjunta la siguiente guía de documentación oficial: <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Monitoring.html">Supervisión de métricas en una instancia de Amazon RDS</a>.</p>
-<h3 id="como-trabajar-con-amazon-rds">Cómo trabajar con Amazon RDS</h3>
-<p>Amazon RDS (Relational Database Service) permite a los usuarios interactuar con el servicio de diferentes maneras, proporcionando flexibilidad para administrar y controlar las bases de datos en la nube de acuerdo a sus necesidades y habilidades técnicas. Existen varias herramientas y métodos de acceso a RDS que van desde interfaces gráficas hasta opciones avanzadas de programación.</p>
-<h4 id="aws-management-console">AWS Management Console</h4>
-<p>La AWS Management Console es una interfaz gráfica, intuitiva y basada en la web que permite a los usuarios gestionar sus instancias de base de datos de forma visual. Es ideal para administradores que prefieren una experiencia sin programación, ya que todas las acciones se pueden realizar mediante clics en un entorno visual.</p>
-<p>Características:</p>
-<ul>
-<li><strong>Gestión visual</strong>: Permite a los usuarios crear, modificar y eliminar instancias de bases de datos mediante una interfaz gráfica amigable.</li>
-<li><strong>Configuración sencilla</strong>: Los usuarios pueden configurar backups automáticos, ajustar el rendimiento, habilitar la replicación entre zonas de disponibilidad (Multi-AZ) y gestionar la seguridad de las bases de datos.</li>
-<li><strong>Monitorización</strong>: Proporciona gráficos en tiempo real que muestran el uso de recursos y el estado de la base de datos, facilitando la monitorización del rendimiento.</li>
-</ul>
-<h4 id="interfaz-de-linea-de-comandos">Interfaz de línea de comandos</h4>
-<p>La AWS Command Line Interface (AWS CLI) permite acceder a Amazon RDS de forma interactiva a través de comandos en una terminal. La CLI ofrece un control más detallado y flexible para usuarios avanzados, desarrolladores y administradores que prefieren trabajar en entornos de línea de comandos.</p>
-<p>Características:</p>
-<ul>
-<li><strong>Acceso a la API</strong>: Mediante la CLI, los usuarios pueden realizar cualquier operación que esté disponible a través de la API de Amazon RDS, como la creación de instancias de base de datos, la configuración de backups o la modificación de parámetros.</li>
-<li><strong>Automatización</strong>: Los comandos de la CLI pueden integrarse en scripts para automatizar tareas repetitivas o manejar varias instancias de base de datos de manera eficiente.</li>
-<li><strong>Instalación y uso</strong>: AWS proporciona una guía detallada para la <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">instalación de la AWS CLI</a> en sistemas operativos como Windows, macOS y Linux.</li>
-</ul>
-<p>Es ideal para administradores que buscan un control completo y la capacidad de automatizar tareas mediante scripting.</p>
-<p>Ejemplo de uso:
-Un comando sencillo para listar las instancias de base de datos en RDS sería:</p>
-<div class="language-text highlight"><pre><span></span><code>aws rds describe-db-instances
-</code></pre></div>
-<p>Para comenzar a usar la CLI con Amazon RDS, debe consultarse la <a href="https://docs.aws.amazon.com/cli/latest/reference/rds/">documentación de referencia</a>, donde se encuentran ejemplos detallados.</p>
-<h4 id="api-de-amazon-rds">API de Amazon RDS</h4>
-<p>La API de Amazon RDS está diseñada para desarrolladores que buscan interactuar con RDS mediante programación. La API ofrece acceso directo a todas las funcionalidades del servicio, permitiendo integrar RDS en aplicaciones de software o servicios personalizados. Para obtener más información, se puede consultar la <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/ProgrammingGuide.html">Referencia de la API de Amazon RDS</a>.</p>
-<p>Para el desarrollo de aplicaciones se recomienda utilizar uno de los kits de desarrollo de software (SDK) de AWS. Los AWS SDK gestionan detalles de bajo nivel como la autenticación, la lógica de reintento y la gestión de errores, para que los desarrolladores puedan centrarse en la lógica de la aplicación. En el siguiente enlace se puede encontrar más información sobre las <a href="https://builder.aws.com/build/tools">Herramientas para Amazon Web Services</a>.</p>
-<p>AWS proporciona bibliotecas, código de muestra, tutoriales y otros recursos para ayudar a los desarrolladores a comenzar rápidamente con el SDK en su lenguaje de preferencia. Estos recursos están disponibles en la sección de Código de muestra y bibliotecas. </p>
-<h3 id="como-se-cobra-amazon-rds">Cómo se cobra Amazon RDS</h3>
-<p>Cuando se usa Amazon RDS, se pueden elegir instancias de base de datos bajo demanda o instancias de base de datos reservadas.</p>
-<p>Las <strong>instancias bajo demanda</strong> permiten a los usuarios pagar por la capacidad de cómputo de la base de datos por horas, sin necesidad de compromisos a largo plazo ni pagos anticipados. Este modelo es ideal para aplicaciones con cargas de trabajo impredecibles o temporales, donde no se sabe exactamente cuánta capacidad se necesitará o durante cuánto tiempo se usará la base de datos.</p>
-<p>Las <strong>instancias reservadas</strong> permiten a los usuarios realizar un compromiso por un período de tiempo (generalmente uno o tres años) a cambio de tarifas significativamente reducidas. Este modelo es ideal para aplicaciones de uso constante o de largo plazo, donde se puede prever la demanda de recursos.</p>
-<p>Para obtener más información se puede consultar la guía de <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/User_DBInstanceBilling.html">Facturación de instancia de base de datos para Amazon RDS</a>.</p>
-<p>Para obtener información acerca de los precios de Amazon RDS, AWS proporciona la <a href="https://aws.amazon.com/rds/pricing/">página del producto de Amazon RDS</a>.
- </p>
-<h3 id="buenas-practicas-seguridad">Buenas prácticas (seguridad)</h3>
-<figure>
-  <img alt="buenas-practicas" src="images/buenas-practicas.png" />
-</figure>
-<h4 id="uso-de-aws-identity-and-access-management-iam">Uso de AWS Identity and Access Management (IAM)</h4>
-<ul>
-<li><strong>Control de acceso</strong>: Utiliza IAM para controlar quién puede realizar operaciones en Amazon RDS, como crear, modificar o eliminar instancias de bases de datos.</li>
-<li><strong>Permisos mínimos necesarios</strong>: Asigna a cada usuario el conjunto mínimo de permisos necesarios para realizar sus tareas.</li>
-<li><strong>Cifrado de datos</strong>:<ul>
-<li><strong>En reposo</strong>: Habilita el cifrado de datos en reposo utilizando claves gestionadas por AWS Key Management Service (KMS).</li>
-<li><strong>En tránsito</strong>: Utiliza SSL/TLS para cifrar las conexiones entre tus aplicaciones y la base de datos.</li>
-</ul>
-</li>
-</ul>
-<h4 id="seguridad-de-red">Seguridad de red</h4>
-<ul>
-<li><strong>VPC y subredes</strong>: Ejecuta tus instancias de RDS dentro de una VPC para un control de acceso de red más granular.</li>
-<li><strong>Grupos de Seguridad</strong>: Configura grupos de seguridad para controlar qué direcciones IP o instancias EC2 pueden conectarse a tus bases de datos.</li>
-</ul>
-<h4 id="monitorizacion-y-auditoria">Monitorización y auditoría</h4>
-<ul>
-<li><strong>Amazon CloudWatch</strong>: Utiliza CloudWatch para monitorear el rendimiento y la actividad de tu base de datos3.</li>
-<li><strong>AWS CloudTrail</strong>: Habilita CloudTrail para registrar todas las llamadas a la API de RDS y auditar las acciones realizadas en tus recursos.</li>
-</ul>
-<h4 id="gestion-de-contrasenas">Gestión de contraseñas</h4>
-<ul>
-<li><strong>Rotación de contraseñas</strong>: Utiliza AWS Secrets Manager para gestionar y rotar automáticamente las credenciales de acceso a la base de datos.</li>
-<li><strong>Contraseñas fuertes</strong>: Asegúrate de que las contraseñas sean fuertes y cumplan con las políticas de seguridad de tu organización.</li>
-</ul>
-<h4 id="alta-disponibilidad-y-recuperacion-ante-desastres">Alta disponibilidad y recuperación ante desastres</h4>
-<ul>
-<li><strong>Despliegue Multi-AZ</strong>: Habilita el despliegue Multi-AZ para asegurar alta disponibilidad y recuperación rápida ante fallos.</li>
-<li><strong>Copias de seguridad automáticas</strong>: Configura copias de seguridad automáticas para proteger tus datos y permitir restauraciones puntuales.</li>
-</ul>
-<h3 id="parameter-groups">Parameter groups</h3>
+<h2 id="parameter-groups">Parameter groups</h2>
 <p>Los grupos de parámetros (<strong>parameter groups</strong>) se asignan a las bases de datos para definir configuraciones como el tamaño del búfer de la instancia, <code>max_connections</code> y parámetros que controlan el comportamiento de las consultas.</p>
 <p>En RDS, para modificar los parámetros definidos en <code>postgres.conf</code>, <code>my.cnf</code> o <code>init.ora</code>, se personalizan mediante los grupos de parámetros.</p>
 <p>Cada motor de base de datos (MySQL, PostgreSQL, Oracle, MariaDB y SQL Server) tiene su propio grupo de parámetros estándar y una versión específica. Este grupo de parámetros, específico del motor y la versión, incluye varios parámetros precalculados según la clase de instancia de la base de datos.</p>
 <p>Si se necesita personalizar un parámetro específico, se debe crear un nuevo grupo de parámetros basado en uno existente y, a continuación, asignarlo a la instancia de base de datos. Esta modificación requiere reiniciar manualmente la instancia de base de datos para que el cambio surta efecto.</p>
 <p>Los parámetros se dividen en <strong>estáticos</strong> (si se cambia de valor se ha de reiniciar la instancia) y <strong>dinámicos</strong> (no es necesario reiniciar la instancia). </p>
-<h3 id="option-groups">Option groups</h3>
+<h2 id="option-groups">Option groups</h2>
 <p>Un grupo de opciones (<strong>option groups</strong>) se utiliza para controlar qué características están habilitadas en las bases de datos. Cada base de datos RDS se asocia a un grupo de opciones al aprovisionarse. Los grupos predeterminados se crean para cada motor de base de datos y versión. Se pueden crear grupos de opciones personalizados, y cada uno solo puede asociarse a bases de datos implementadas con el mismo motor y versión. Por ejemplo, se necesitan dos grupos de opciones diferentes para admitir tanto una base de datos Oracle versión 19 como una versión 12.</p>
 <p>Para agregar opciones al grupo, se han de seleccionar de la lista y aplicar los cambios. Algunos ejemplos de las opciones disponibles son:</p>
 <ul>
@@ -1113,6 +1034,78 @@ Un comando sencillo para listar las instancias de base de datos en RDS sería:</
 </li>
 </ul>
 <p>Algunas de estas opciones requieren tiempo de inactividad para la aplicación, por lo que se puede optar por implementar los cambios de inmediato o esperar hasta la ventana de mantenimiento. Cualquier cambio que se aplique a un grupo de opciones afectará a todas las bases de datos asociadas a dicho grupo, por lo que puede ser una forma rápida de añadir opciones a un gran número de bases de datos. Sin embargo, hay que tener en cuenta que cualquier interrupción del servicio afectará a todas las bases de datos del grupo.</p>
+<h2 id="supervision-de-amazon-rds">Supervisión de Amazon RDS</h2>
+<p>Hay varias formas de hacer un seguimiento del desempeño y el estado de una instancia de base de datos. Se puede utilizar el servicio de Amazon CloudWatch para monitorear el rendimiento y el estado de una instancia de base de datos. Los gráficos de rendimiento de CloudWatch se muestran en la consola de Amazon RDS. También es posible suscribirse a eventos de Amazon RDS si se desea recibir notificaciones sobre cambios en una instancia de base de datos, una instantánea de base de datos o un grupo de parámetros de base de datos.</p>
+<p>Para obtener más información, se adjunta la siguiente guía de documentación oficial: <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Monitoring.html">Supervisión de métricas en una instancia de Amazon RDS</a>.</p>
+<h2 id="como-trabajar-con-amazon-rds">Cómo trabajar con Amazon RDS</h2>
+<p>Amazon RDS (Relational Database Service) permite a los usuarios interactuar con el servicio de diferentes maneras, proporcionando flexibilidad para administrar y controlar las bases de datos en la nube de acuerdo a sus necesidades y habilidades técnicas. Existen varias herramientas y métodos de acceso a RDS que van desde interfaces gráficas hasta opciones avanzadas de programación.</p>
+<h3 id="aws-management-console">AWS Management Console</h3>
+<p>La AWS Management Console es una interfaz gráfica, intuitiva y basada en la web que permite a los usuarios gestionar sus instancias de base de datos de forma visual. Es ideal para administradores que prefieren una experiencia sin programación, ya que todas las acciones se pueden realizar mediante clics en un entorno visual.</p>
+<p>Características:</p>
+<ul>
+<li><strong>Gestión visual</strong>: Permite a los usuarios crear, modificar y eliminar instancias de bases de datos mediante una interfaz gráfica amigable.</li>
+<li><strong>Configuración sencilla</strong>: Los usuarios pueden configurar backups automáticos, ajustar el rendimiento, habilitar la replicación entre zonas de disponibilidad (Multi-AZ) y gestionar la seguridad de las bases de datos.</li>
+<li><strong>Monitorización</strong>: Proporciona gráficos en tiempo real que muestran el uso de recursos y el estado de la base de datos, facilitando la monitorización del rendimiento.</li>
+</ul>
+<h3 id="interfaz-de-linea-de-comandos">Interfaz de línea de comandos</h3>
+<p>La AWS Command Line Interface (AWS CLI) permite acceder a Amazon RDS de forma interactiva a través de comandos en una terminal. La CLI ofrece un control más detallado y flexible para usuarios avanzados, desarrolladores y administradores que prefieren trabajar en entornos de línea de comandos.</p>
+<p>Características:</p>
+<ul>
+<li><strong>Acceso a la API</strong>: Mediante la CLI, los usuarios pueden realizar cualquier operación que esté disponible a través de la API de Amazon RDS, como la creación de instancias de base de datos, la configuración de backups o la modificación de parámetros.</li>
+<li><strong>Automatización</strong>: Los comandos de la CLI pueden integrarse en scripts para automatizar tareas repetitivas o manejar varias instancias de base de datos de manera eficiente.</li>
+<li><strong>Instalación y uso</strong>: AWS proporciona una guía detallada para la <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">instalación de la AWS CLI</a> en sistemas operativos como Windows, macOS y Linux.</li>
+</ul>
+<p>Es ideal para administradores que buscan un control completo y la capacidad de automatizar tareas mediante scripting.</p>
+<p>Ejemplo de uso:
+Un comando sencillo para listar las instancias de base de datos en RDS sería:</p>
+<div class="language-text highlight"><pre><span></span><code>aws rds describe-db-instances
+</code></pre></div>
+<p>Para comenzar a usar la CLI con Amazon RDS, debe consultarse la <a href="https://docs.aws.amazon.com/cli/latest/reference/rds/">documentación de referencia</a>, donde se encuentran ejemplos detallados.</p>
+<h3 id="api-de-amazon-rds">API de Amazon RDS</h3>
+<p>La API de Amazon RDS está diseñada para desarrolladores que buscan interactuar con RDS mediante programación. La API ofrece acceso directo a todas las funcionalidades del servicio, permitiendo integrar RDS en aplicaciones de software o servicios personalizados. Para obtener más información, se puede consultar la <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/ProgrammingGuide.html">Referencia de la API de Amazon RDS</a>.</p>
+<p>Para el desarrollo de aplicaciones se recomienda utilizar uno de los kits de desarrollo de software (SDK) de AWS. Los AWS SDK gestionan detalles de bajo nivel como la autenticación, la lógica de reintento y la gestión de errores, para que los desarrolladores puedan centrarse en la lógica de la aplicación. En el siguiente enlace se puede encontrar más información sobre las <a href="https://builder.aws.com/build/tools">Herramientas para Amazon Web Services</a>.</p>
+<p>AWS proporciona bibliotecas, código de muestra, tutoriales y otros recursos para ayudar a los desarrolladores a comenzar rápidamente con el SDK en su lenguaje de preferencia. Estos recursos están disponibles en la sección de Código de muestra y bibliotecas. </p>
+<h2 id="como-se-cobra-amazon-rds">Cómo se cobra Amazon RDS</h2>
+<p>Cuando se usa Amazon RDS, se pueden elegir instancias de base de datos bajo demanda o instancias de base de datos reservadas.</p>
+<p>Las <strong>instancias bajo demanda</strong> permiten a los usuarios pagar por la capacidad de cómputo de la base de datos por horas, sin necesidad de compromisos a largo plazo ni pagos anticipados. Este modelo es ideal para aplicaciones con cargas de trabajo impredecibles o temporales, donde no se sabe exactamente cuánta capacidad se necesitará o durante cuánto tiempo se usará la base de datos.</p>
+<p>Las <strong>instancias reservadas</strong> permiten a los usuarios realizar un compromiso por un período de tiempo (generalmente uno o tres años) a cambio de tarifas significativamente reducidas. Este modelo es ideal para aplicaciones de uso constante o de largo plazo, donde se puede prever la demanda de recursos.</p>
+<p>Para obtener más información se puede consultar la guía de <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/User_DBInstanceBilling.html">Facturación de instancia de base de datos para Amazon RDS</a>.</p>
+<p>Para obtener información acerca de los precios de Amazon RDS, AWS proporciona la <a href="https://aws.amazon.com/rds/pricing/">página del producto de Amazon RDS</a>.
+ </p>
+<h2 id="buenas-practicas-seguridad">Buenas prácticas (seguridad)</h2>
+<figure>
+  <img alt="buenas-practicas" src="images/buenas-practicas.png" />
+</figure>
+<h4 id="uso-de-aws-identity-and-access-management-iam">Uso de AWS Identity and Access Management (IAM)</h4>
+<ul>
+<li><strong>Control de acceso</strong>: Utiliza IAM para controlar quién puede realizar operaciones en Amazon RDS, como crear, modificar o eliminar instancias de bases de datos.</li>
+<li><strong>Permisos mínimos necesarios</strong>: Asigna a cada usuario el conjunto mínimo de permisos necesarios para realizar sus tareas.</li>
+<li><strong>Cifrado de datos</strong>:<ul>
+<li><strong>En reposo</strong>: Habilita el cifrado de datos en reposo utilizando claves gestionadas por AWS Key Management Service (KMS).</li>
+<li><strong>En tránsito</strong>: Utiliza SSL/TLS para cifrar las conexiones entre tus aplicaciones y la base de datos.</li>
+</ul>
+</li>
+</ul>
+<h3 id="seguridad-de-red">Seguridad de red</h3>
+<ul>
+<li><strong>VPC y subredes</strong>: Ejecuta tus instancias de RDS dentro de una VPC para un control de acceso de red más granular.</li>
+<li><strong>Grupos de Seguridad</strong>: Configura grupos de seguridad para controlar qué direcciones IP o instancias EC2 pueden conectarse a tus bases de datos.</li>
+</ul>
+<h3 id="monitorizacion-y-auditoria">Monitorización y auditoría</h3>
+<ul>
+<li><strong>Amazon CloudWatch</strong>: Utiliza CloudWatch para monitorear el rendimiento y la actividad de tu base de datos3.</li>
+<li><strong>AWS CloudTrail</strong>: Habilita CloudTrail para registrar todas las llamadas a la API de RDS y auditar las acciones realizadas en tus recursos.</li>
+</ul>
+<h3 id="gestion-de-contrasenas">Gestión de contraseñas</h3>
+<ul>
+<li><strong>Rotación de contraseñas</strong>: Utiliza AWS Secrets Manager para gestionar y rotar automáticamente las credenciales de acceso a la base de datos.</li>
+<li><strong>Contraseñas fuertes</strong>: Asegúrate de que las contraseñas sean fuertes y cumplan con las políticas de seguridad de tu organización.</li>
+</ul>
+<h3 id="alta-disponibilidad-y-recuperacion-ante-desastres">Alta disponibilidad y recuperación ante desastres</h3>
+<ul>
+<li><strong>Despliegue Multi-AZ</strong>: Habilita el despliegue Multi-AZ para asegurar alta disponibilidad y recuperación rápida ante fallos.</li>
+<li><strong>Copias de seguridad automáticas</strong>: Configura copias de seguridad automáticas para proteger tus datos y permitir restauraciones puntuales.</li>
+</ul>
 
 
 
