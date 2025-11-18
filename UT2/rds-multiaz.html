@@ -732,11 +732,11 @@
 Se conecta a la instancia de escritura actual de dicho clúster. Este punto de conexión es el único que puede realizar operaciones de escritura, como instrucciones DDL y DML. También puede realizar operaciones de lectura.</p>
 <p>Cada clúster de bases de datos Multi-AZ tiene un cluster endpoint y una instancia de base de datos de escritura.</p>
 <p>Si la instancia de escritura actual de un clúster de bases de datos falla, el clúster Multi-AZ conmuta automáticamente a una nueva instancia de escritura. Durante la conmutación por error, el clúster continúa atendiendo las solicitudes de conexión al punto de conexión de clúster desde la nueva instancia de escritura, con una interrupción mínima del servicio.</p>
-<p><strong>Reader endpoint</strong>
-Proporciona compatibilidad con conexiones de solo lectura al clúster de base de datos, como consultas SELECT. Al procesar estas instrucciones en las instancias de lectura, este punto de conexión reduce la sobrecarga en la instancia de base de datos de escritura. También ayuda al clúster a escalar la capacidad para gestionar consultas SELECT simultáneas. Cada clúster Multi-AZ tiene un punto de conexión de lectura.</p>
+<p><strong>Reader endpoint</strong></p>
+<p>Proporciona compatibilidad con conexiones de solo lectura al clúster de base de datos, como consultas SELECT. Al procesar estas instrucciones en las instancias de lectura, este punto de conexión reduce la sobrecarga en la instancia de base de datos de escritura. También ayuda al clúster a escalar la capacidad para gestionar consultas SELECT simultáneas. Cada clúster Multi-AZ tiene un punto de conexión de lectura.</p>
 <p>El punto de conexión de lectura envía cada solicitud de conexión a una de las instancias de base de datos de lectura. </p>
-<p><strong>Instance endpoint</strong>
-Se conecta a una instancia de base de datos específica dentro de un clúster de base de datos Multi-AZ.</p>
+<p><strong>Instance endpoint</strong></p>
+<p>Se conecta a una instancia de base de datos específica dentro de un clúster de base de datos Multi-AZ.</p>
 <p>Cada instancia en un clúster tiene su propio endpoint. El endpoint proporciona control directo sobre las conexiones al clúster. Por ejemplo, en escenarios donde una aplicación cliente podría requerir un balanceado de carga más preciso según el tipo de carga de trabajo. En este caso, se pueden configurar varios clientes para que se conecten a diferentes instancias de lectura en el clúster y así distribuir las cargas de lectura.</p>
 <h4 id="cluster-parameter-group">Cluster parameter group</h4>
 <p>En un clúster de base de datos Multi-AZ, un <strong>cluster parameter group</strong> de base de datos actúa como contenedor de los valores de configuración del motor que se aplican a todas las instancias de base de datos del clúster. La configuración del cluster parameter group se utiliza para todas las instancias de base de datos del clúster.</p>
