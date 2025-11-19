@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../UT1/no-relacionales.html">
+        <link rel="prev" href="rds-multiaz.html">
       
-      
-        <link rel="next" href="rds.html">
       
       
       <link rel="icon" href="../favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Introducción - Administración de Bases de Datos en la Nube</title>
+        <title>Amazon RDS y Amazon VPC - Administración de Bases de Datos en la Nube</title>
       
     
     
@@ -70,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion" class="md-skip">
+        <a href="#amazon-rds-y-amazon-vpc" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -105,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introducción
+              Amazon RDS y Amazon VPC
             
           </span>
         </div>
@@ -373,32 +371,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Introducción
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="introduccion.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="introduccion.html" class="md-nav__link">
         
   
   
@@ -409,44 +385,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#de-las-bases-de-datos-en-las-instalaciones-a-las-bases-de-datos-en-la-nube" class="md-nav__link">
-    <span class="md-ellipsis">
-      De las bases de datos en las instalaciones a las bases de datos en la nube
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuando-usar-amazon-rds" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cuándo usar Amazon RDS
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -502,10 +440,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="rds-vpc.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Amazon RDS y Amazon VPC
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="rds-vpc.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -516,6 +476,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-una-instancia-de-bases-de-datos-en-una-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de una instancia de bases de datos en una VPC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso de una instancia de bases de datos en una VPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grupo-de-subredes-de-bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grupo de subredes de bases de datos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escenarios-de-acceso-a-una-instancia-de-base-de-datos-en-una-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escenarios de acceso a una instancia de base de datos en una VPC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Escenarios de acceso a una instancia de base de datos en una VPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceso-a-una-instancia-de-base-de-datos-en-una-vpc-desde-una-instancia-de-amazon-ec2-de-la-misma-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso a una instancia de base de datos en una VPC desde una instancia de Amazon EC2 de la misma VPC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceso-a-una-instancia-de-base-de-datos-en-una-vpc-desde-una-instancia-ec2-de-otra-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso a una instancia de base de datos en una VPC desde una instancia EC2 de otra VPC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceso-a-una-instancia-de-base-de-datos-en-una-vpc-desde-una-aplicacion-cliente-a-traves-de-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso a una instancia de base de datos en una VPC desde una aplicación cliente a través de internet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-instancia-de-base-de-datos-en-una-vpc-a-la-que-se-accede-mediante-una-red-privada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Una instancia de base de datos en una VPC a la que se accede mediante una red privada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -555,20 +610,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#de-las-bases-de-datos-en-las-instalaciones-a-las-bases-de-datos-en-la-nube" class="md-nav__link">
+  <a href="#uso-de-una-instancia-de-bases-de-datos-en-una-vpc" class="md-nav__link">
     <span class="md-ellipsis">
-      De las bases de datos en las instalaciones a las bases de datos en la nube
+      Uso de una instancia de bases de datos en una VPC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso de una instancia de bases de datos en una VPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grupo-de-subredes-de-bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grupo de subredes de bases de datos
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#cuando-usar-amazon-rds" class="md-nav__link">
+  <a href="#escenarios-de-acceso-a-una-instancia-de-base-de-datos-en-una-vpc" class="md-nav__link">
     <span class="md-ellipsis">
-      Cuándo usar Amazon RDS
+      Escenarios de acceso a una instancia de base de datos en una VPC
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Escenarios de acceso a una instancia de base de datos en una VPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceso-a-una-instancia-de-base-de-datos-en-una-vpc-desde-una-instancia-de-amazon-ec2-de-la-misma-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso a una instancia de base de datos en una VPC desde una instancia de Amazon EC2 de la misma VPC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceso-a-una-instancia-de-base-de-datos-en-una-vpc-desde-una-instancia-ec2-de-otra-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso a una instancia de base de datos en una VPC desde una instancia EC2 de otra VPC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceso-a-una-instancia-de-base-de-datos-en-una-vpc-desde-una-aplicacion-cliente-a-traves-de-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso a una instancia de base de datos en una VPC desde una aplicación cliente a través de internet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-instancia-de-base-de-datos-en-una-vpc-a-la-que-se-accede-mediante-una-red-privada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Una instancia de base de datos en una VPC a la que se accede mediante una red privada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -588,21 +700,44 @@
 
 
 
-<h1 id="introduccion">Introducción</h1>
-<p>La administración de bases de datos en la nube implica la gestión eficiente de sistemas de bases de datos alojados en plataformas de computación en la nube, como AWS, Microsoft Azure y Google Cloud. A diferencia de la administración tradicional de bases de datos, donde los administradores gestionaban tanto el hardware como el software localmente, en la nube muchas de estas responsabilidades son asumidas por los proveedores de servicios, lo que permite a los administradores centrarse en tareas más estratégicas como la optimización del rendimiento, la seguridad y la disponibilidad de los datos.</p>
-<p>La administración en la nube incluye la configuración inicial, la gestión de usuarios y permisos, la monitorización continua del rendimiento, la implementación de estrategias de escalabilidad automática y la planificación de la recuperación ante desastres. Los servicios gestionados en la nube simplifican estos procesos, automatizando tareas como la aplicación de parches, copias de seguridad y actualizaciones, lo que permite a las organizaciones aprovechar las capacidades de la nube para aumentar la eficiencia operativa y reducir los costes asociados con la administración de bases de datos.</p>
-<p>El <strong>despliegue de una base de datos relacional en la nube</strong> se refiere al proceso de instalar, configurar y ejecutar una base de datos relacional (RDBMS) en una <strong>infraestructura de computación en la nube</strong>. En lugar de alojar la base de datos en servidores locales (on-premise), se utiliza una plataforma en la nube, lo que ofrece ventajas en términos de escalabilidad, flexibilidad y costes operativos. </p>
-<h2 id="de-las-bases-de-datos-en-las-instalaciones-a-las-bases-de-datos-en-la-nube">De las bases de datos en las instalaciones a las bases de datos en la nube</h2>
+<h1 id="amazon-rds-y-amazon-vpc">Amazon RDS y Amazon VPC</h1>
+<p>Amazon Virtual Private Cloud (Amazon VPC) permite lanzar recursos de AWS, como instancias de base de datos de Amazon RDS, en una nube privada virtual (VPC).</p>
+<p>Al usar una VPC, podemos controlar un entorno de red virtual. Podemos elegir el rango de direcciones IP, crear subredes y configurar el enrutamiento y las listas de control de acceso. No hay coste adicional por ejecutar una instancia de base de datos en una VPC.</p>
+<p>Las cuentas tienen una VPC predeterminada. Todas las nuevas instancias de base de datos se crean en la VPC predeterminada, a menos que especifique otra. La VPC predeterminada tiene tres subredes que se pueden utilizar para aislar recursos dentro de la VPC. La VPC predeterminada también tiene un Internet Gateway que se utiliza para proporcionar acceso a los recursos situados dentro de la VPC desde fuera de la VPC.</p>
+<h2 id="uso-de-una-instancia-de-bases-de-datos-en-una-vpc">Uso de una instancia de bases de datos en una VPC</h2>
+<p>Si queremos desplegar una instancia de bases de datos, <strong>la VPC debe tener dos subredes como mínimo</strong>. Estas subredes deben estar en <strong>dos zonas de disponibilidad distintas</strong> de la Región de AWS en la que desea implementar la instancia de base de datos. Una subred es un segmento del rango de direcciones IP de una VPC y permite agrupar instancias de base de datos según necesidades operativas y de seguridad.</p>
+<p>Si se desea que una instancia de base de datos de la VPC sea accesible públicamente, se debe activar los atributos DNS hostnames y DNS resolution.</p>
+<p>La VPC debe tener un grupo de seguridad de VPC que permita el acceso a la instancia de base de datos.</p>
+<h3 id="grupo-de-subredes-de-bases-de-datos">Grupo de subredes de bases de datos</h3>
+<p>Un grupo de subredes de base de datos es una colección de subredes (normalmente privadas) que se crean en una VPC y que después se asignan a las instancias de bases de datos. Para crear un grupo de subredes de base de datos, se han de especificar las subredes que lo compondrán.</p>
+<p>Cuando crea una instancia de base de datos en una VPC, se debe elegir un grupo de subredes de base de datos. Desde el grupo de subred de base de datos, Amazon RDS elige una subred y una dirección IP dentro de esa subred para asociarla con la de base de datos. La base de datos utiliza la zona de disponibilidad que contiene la subred. Amazon RDS siempre asigna una dirección IP desde una subred que tiene espacio de dirección IP libre.</p>
+<p>Para implementaciones Multi-AZ, Amazon RDS podrá crear una instancia en espera en otra zona de disponibilidad si fuera necesario. </p>
+<p>Las subredes de un grupo de subredes de base de datos son públicas o privadas. Las subredes son públicas o privadas, en función de la configuración que establezca para sus listas de control de acceso a la red (ACL de red) y tablas de enrutamiento. Para que una instancia de base de datos sea accesible públicamente, todas las subredes del grupo de subredes de base de datos deben ser públicas. Si una subred asociada a una instancia de base de datos de acceso público cambia de pública a privada, eso puede afectar a la disponibilidad de la instancia.</p>
+<h2 id="escenarios-de-acceso-a-una-instancia-de-base-de-datos-en-una-vpc">Escenarios de acceso a una instancia de base de datos en una VPC</h2>
+<h3 id="acceso-a-una-instancia-de-base-de-datos-en-una-vpc-desde-una-instancia-de-amazon-ec2-de-la-misma-vpc">Acceso a una instancia de base de datos en una VPC desde una instancia de Amazon EC2 de la misma VPC</h3>
+<p>Un uso común de una instancia de base de datos en una VPC es compartir datos con un servidor de aplicaciones que se ejecuta en una instancia de Amazon EC2 de la misma VPC.</p>
 <figure>
-  <img alt="nube" src="images/nube.png" />
+  <img alt="ec2-rds" src="images/ec2-rds.png" />
 </figure>
-<p>Cuando la base de datos está en las instalaciones, el administrador de la base de datos es responsable de todo. Las tareas de administración de la base de datos incluyen la optimización de las aplicaciones y las consultas, la configuración del hardware, la aplicación de parches al hardware, la configuración y alimentación de las redes y la gestión de la calefacción, la ventilación y el aire acondicionado.</p>
-<p>Si se cambia a una base de datos que se ejecuta en una instancia de <strong>Amazon Elastic Compute Cloud</strong> (<strong>Amazon EC2</strong>), ya no habrá que administrar el hardware subyacente ni encargarse de las operaciones del centro de datos. Sin embargo, habrá que ocuparse de la aplicación de parches al SO y todas las operaciones de software y copia de seguridad.</p>
-<p>Al instalar una base de datos en Amazon RDS o Amazon Aurora, se reducen las responsabilidades administrativas. Si se migra a la nube, se puede escalar la base de datos, habilitar la alta disponibilidad, administrar las copias de seguridad y aplicar parches automáticamente. Así, los clientes pueden centrarse en lo que realmente importa: optimizar su aplicación.</p>
-<h2 id="cuando-usar-amazon-rds">Cuándo usar Amazon RDS</h2>
-<p>RDS es la solución de base de datos relacional convencional, pero a veces no será lo más adecuado según necesidades, y en AWS hay servicios más específicos como DynamoDB (NoSQL) y Redshift (Datawarehouse):</p>
+<h3 id="acceso-a-una-instancia-de-base-de-datos-en-una-vpc-desde-una-instancia-ec2-de-otra-vpc">Acceso a una instancia de base de datos en una VPC desde una instancia EC2 de otra VPC</h3>
+<p>Cuando una instancia de base de datos está en una VPC que no coincide con la de la instancia EC2 que se está utilizando para obtener acceso a ella, se puede usar una conexión VPC <strong>peering</strong>  para obtener acceso a la instancia de base de datos.</p>
 <figure>
-  <img alt="uso-rds" src="images/uso-rds.png" />
+  <img alt="vpc-peering" src="images/vpc-peering.png" />
+</figure>
+<h3 id="acceso-a-una-instancia-de-base-de-datos-en-una-vpc-desde-una-aplicacion-cliente-a-traves-de-internet">Acceso a una instancia de base de datos en una VPC desde una aplicación cliente a través de internet</h3>
+<p>Para acceder a una instancia de base de datos en una VPC desde una aplicación cliente a través de internet, se puede configurar una VPC con una subred pública única y un Internet Gateway para permitir la comunicación a través de internet.</p>
+<figure>
+  <img alt="public-rds" src="images/public-rds.png" />
+</figure>
+<h3 id="una-instancia-de-base-de-datos-en-una-vpc-a-la-que-se-accede-mediante-una-red-privada">Una instancia de base de datos en una VPC a la que se accede mediante una red privada</h3>
+<p>Si la instancia de base de datos no es accesible públicamente, existen las siguientes opciones para acceder a ella desde una red privada:</p>
+<ul>
+<li>Una conexión de Site-to-Site VPN de AWS.</li>
+<li>Una conexión de Direct Connect. </li>
+<li>Una conexión de AWS Client VPN. </li>
+</ul>
+<figure>
+  <img alt="vpn-connection" src="images/vpn-connection.png" />
 </figure>
 
 
