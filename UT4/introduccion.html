@@ -758,20 +758,23 @@
 <h2 id="tipos-de-datos">Tipos de datos</h2>
 <p>Una tabla de DynamoDB puede almacenar datos en los siguientes formatos:</p>
 <ul>
-<li>String: un valor que puede contener letras y números:
- "Name": { "S": "Kate" }</li>
-<li>Number: un valor que solo puede contener números, incluyendo un punto decimal:
- "Score": { "N": "1045" }</li>
-<li>Binary: un valor que puede almacenar tipo de datos complejos en formato base64. Puede almacenar imágenes y documentos:
- "Image": { "B": "bXkgc3VwZXIgc64jcmV0IHRlehrsh" }</li>
-<li>Boolean: un valor que solo puede almacenar true o false:
- "Parent": { "BOOL": "false" }</li>
-<li>Null: un valor que puede ser true o false:
- "Empty": { "NULL": "true" }</li>
-<li>List: un array de valores del mismo o diferentes tipos de datos, como strings o numbers:
- "Objects": { "L": [ "Book", "98" ] }</li>
-<li>Map: una colección de parejas clave-valor permitiendo datos anidados:
- "ChildrenDetails": {
+<li>
+<p>String: un valor que puede contener letras y números:</p>
+<p>"Name": { "S": "Kate" }</p>
+</li>
+<li>
+<p>Number: un valor que solo puede contener números, incluyendo un punto decimal:</p>
+<p>"Score": { "N": "1045" }
+- Binary: un valor que puede almacenar tipo de datos complejos en formato base64. Puede almacenar imágenes y documentos:</p>
+<p>"Image": { "B": "bXkgc3VwZXIgc64jcmV0IHRlehrsh" }
+- Boolean: un valor que solo puede almacenar true o false:</p>
+<p>"Parent": { "BOOL": "false" }
+- Null: un valor que puede ser true o false:</p>
+<p>"Empty": { "NULL": "true" }
+- List: un array de valores del mismo o diferentes tipos de datos, como strings o numbers:</p>
+<p>"Objects": { "L": [ "Book", "98" ] }
+- Map: una colección de parejas clave-valor permitiendo datos anidados:</p>
+<p>"ChildrenDetails": {
     "M": {
         "Dave": {
             "Relationship": "Son",
@@ -782,16 +785,21 @@
             "Age": 9,
             "HairColour": "Brown"
         }
-    }</li>
-<li>String set: una lista de strings:
- "Children": { "SS": [ "Dave", "Amy" ] }</li>
-<li>Number set: una lista de números:
- "Codes": { "NS": [ "16436", "98464" ] }</li>
-<li>Binary set: una lista de valores binarios:
- "Images": { "BS": [ "aGVbG93b3JsZA==", "c2VjcmV0cw==" ] }</li>
+    }
+- String set: una lista de strings:</p>
+<p>"Children": { "SS": [ "Dave", "Amy" ] }</p>
+</li>
+<li>
+<p>Number set: una lista de números:</p>
+<p>"Codes": { "NS": [ "16436", "98464" ] }</p>
+</li>
+<li>
+<p>Binary set: una lista de valores binarios:</p>
+<p>"Images": { "BS": [ "aGVbG93b3JsZA==", "c2VjcmV0cw==" ] }</p>
+</li>
 </ul>
-<p>Si bien DynamoDB puede tener un esquema indefinido, lo que significa que se pueden crear nuevos atributos en tiempo de ejecución que difieran para cada registro de la tabla, hay que asegurarse de que los tipos de atributos sean consistentes. Por ejemplo, no se puede insertar una cadena en un atributo numérico.
-Para usar DynamoDB, se debe tener en cuenta lo siguiente:</p>
+<p>Si bien DynamoDB puede tener un esquema indefinido, lo que significa que se pueden crear nuevos atributos en tiempo de ejecución que difieran para cada registro de la tabla, hay que asegurarse de que los tipos de atributos sean consistentes. Por ejemplo, no se puede insertar una cadena en un atributo numérico.</p>
+<p>Para usar DynamoDB, se debe tener en cuenta lo siguiente:</p>
 <ul>
 <li>¿Qué clave quiero usar para mi tabla?</li>
 <li>¿Cuántos datos leeré y escribiré en mi tabla?</li>
